@@ -1,180 +1,299 @@
 /**
- * LOTUS JEWELLERS — INTERACTIVE STOREFRONT ENGINE
+ * LOTUS JEWELLERS — HOMEPAGE BLUEPRINT & INTERACTIVE COMMERCE ENGINE
  */
 
 document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
-  // --- 1. Product Catalog Data ---
-  const products = [
-    {
-      id: 1,
-      title: 'Aura Solitaire Diamond Ring',
-      category: 'solitaire',
-      price: 185000,
-      comparePrice: 210000,
-      specs: '1.20 ct Natural Diamond • 18K Yellow Gold • VVS1 / E Color',
-      badge: 'Bestseller',
-      imgPrimary: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80',
-      description: 'Handcrafted with an exceptional GIA-certified 1.20 carat round brilliant solitaire, held securely in our signature four-prong lotus basket.'
-    },
-    {
-      id: 2,
-      title: 'Maharani Polki Heritage Choker',
-      category: 'bridal',
-      price: 460000,
-      comparePrice: null,
-      specs: 'Uncut Diamonds • Natural Colombian Emeralds • 22K Hallmarked Gold',
-      badge: 'Heritage Masterpiece',
-      imgPrimary: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1611591477858-a963212fb943?auto=format&fit=crop&w=800&q=80',
-      description: 'An ode to royal Rajasthani court jewellery, featuring hand-strung natural emerald beads with open-set uncut syndicate polki diamonds.'
-    },
-    {
-      id: 3,
-      title: 'Celeste Diamond Drop Earrings',
-      category: 'earrings',
-      price: 125000,
-      comparePrice: 140000,
-      specs: '0.85 ct Diamonds • 18K Rose Gold • IGI Certified',
-      badge: 'New Arrival',
-      imgPrimary: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80',
-      description: 'Sculptural waterfall drops cascading with pavé and marquise diamonds, engineered for lightweight red-carpet movement.'
-    },
-    {
-      id: 4,
-      title: 'Venezia Tennis Bracelet',
-      category: 'bracelets',
-      price: 240000,
-      comparePrice: 265000,
-      specs: '3.50 ct Diamonds • Platinum & 18K White Gold',
-      badge: 'Classic',
-      imgPrimary: 'https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
-      description: 'A timeless continuous line of perfectly matched D-F colour diamonds set in high-grade platinum with double-safety lock clasp.'
-    },
-    {
-      id: 5,
-      title: 'Noor Emerald & Diamond Ring',
-      category: 'solitaire',
-      price: 310000,
-      comparePrice: null,
-      specs: '2.40 ct Zambian Emerald • 0.60 ct Diamond Halo • 18K Gold',
-      badge: 'High Jewellery',
-      imgPrimary: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
-      description: 'A deep forest green vivid Zambian emerald framed by a stepped geometric diamond halo, crafted with vintage heirloom precision.'
-    },
-    {
-      id: 6,
-      title: 'Devi Bridal Polki Mathapatti',
-      category: 'bridal',
-      price: 285000,
-      comparePrice: 320000,
-      specs: 'Syndicate Polki • Basra Seed Pearls • 22K Gold',
-      badge: 'Bridal Regalia',
-      imgPrimary: 'https://images.unsplash.com/photo-1611591477858-a963212fb943?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
-      description: 'Traditional handcrafted bridal headpiece featuring delicate South Sea pearl fringes and floral uncut diamond motifs.'
-    },
-    {
-      id: 7,
-      title: 'Lumière Diamond Pendant Necklace',
-      category: 'necklaces',
-      price: 95000,
-      comparePrice: 110000,
-      specs: '0.65 ct Pear Diamond • 18K Yellow Gold Chain',
-      badge: 'Everyday Luxury',
-      imgPrimary: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80',
-      description: 'Effortless single teardrop pear cut diamond suspended on an adjustable micro-faceted diamond cut gold chain.'
-    },
-    {
-      id: 8,
-      title: 'Royal Kada Gold & Ruby Bangle',
-      category: 'bracelets',
-      price: 390000,
-      comparePrice: null,
-      specs: 'Burmese Pigeon Blood Rubies • 22K Solid Gold • 42 Grams',
-      badge: 'Artisan Crafted',
-      imgPrimary: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80',
-      imgSecondary: 'https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=800&q=80',
-      description: 'Intricate nakashi hand carving on solid 22 karat gold, punctuated with unheated natural Burmese rubies.'
-    }
-  ];
+  // --- 1. Master Product Database ---
+  const catalog = {
+    // Rings
+    rings: [
+      {
+        id: 101,
+        title: 'Aura Solitaire Diamond Ring',
+        category: 'rings',
+        price: 185000,
+        comparePrice: 210000,
+        specs: '1.20 ct GIA Diamond • 18K Yellow Gold',
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Solitaire Classic'
+      },
+      {
+        id: 102,
+        title: 'Celestial Halo Diamond Ring',
+        category: 'rings',
+        price: 145000,
+        comparePrice: null,
+        specs: '0.85 ct Pavé Halo • 18K Rose Gold',
+        image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80',
+        badge: 'Engagement'
+      },
+      {
+        id: 103,
+        title: 'Eternal Classic 22K Gold Ring',
+        category: 'rings',
+        price: 38000,
+        comparePrice: 42000,
+        specs: '22K BIS Hallmarked Solid Gold • 6.2g',
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Daily Wear'
+      },
+      {
+        id: 104,
+        title: 'Elysian Stackable Diamond Band',
+        category: 'rings',
+        price: 52000,
+        comparePrice: null,
+        specs: '0.35 ct Diamonds • 18K White Gold',
+        image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80',
+        badge: 'Stackable'
+      },
+      {
+        id: 105,
+        title: 'Noor Emerald & Solitaire Ring',
+        category: 'rings',
+        price: 295000,
+        comparePrice: 320000,
+        specs: '2.10 ct Zambian Emerald • 18K Gold',
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80',
+        badge: 'High Jewellery'
+      },
+      {
+        id: 106,
+        title: 'Verona Platinum Wedding Band',
+        category: 'rings',
+        price: 88000,
+        comparePrice: null,
+        specs: '950 Pure Platinum • Comfort Fit',
+        image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80',
+        badge: 'Wedding'
+      }
+    ],
+
+    // Bangles
+    bangles: [
+      {
+        id: 201,
+        title: 'Rajputana 22K Solid Gold Kada',
+        category: 'bangles',
+        price: 215000,
+        comparePrice: null,
+        specs: '22K Hallmarked Gold • 32 Grams Hand-Carved',
+        image: 'https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=600&q=80',
+        badge: 'Heritage Kada'
+      },
+      {
+        id: 202,
+        title: 'Venezia Diamond Tennis Bangle',
+        category: 'bangles',
+        price: 340000,
+        comparePrice: 375000,
+        specs: '4.20 ct Natural Diamonds • 18K White Gold',
+        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80',
+        badge: 'Diamond Classic'
+      },
+      {
+        id: 203,
+        title: 'Devi Bridal Polki Bangle Set (Pair)',
+        category: 'bangles',
+        price: 490000,
+        comparePrice: null,
+        specs: 'Uncut Syndicate Polki • 22K Gold • Ruby Accents',
+        image: 'https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=600&q=80',
+        badge: 'Bridal Set'
+      },
+      {
+        id: 204,
+        title: 'Lina Sleek Daily Wear Gold Bangle',
+        category: 'bangles',
+        price: 68000,
+        comparePrice: 75000,
+        specs: '18K Yellow Gold • Flexible Spring Hinge',
+        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80',
+        badge: 'Everyday'
+      }
+    ],
+
+    // Earrings
+    earrings: [
+      {
+        id: 301,
+        title: 'Celeste Diamond Waterfall Drops',
+        category: 'earrings',
+        price: 125000,
+        comparePrice: 140000,
+        specs: '0.90 ct Diamonds • 18K Rose Gold',
+        image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80',
+        badge: 'New Arrival'
+      },
+      {
+        id: 302,
+        title: 'Royal Jhumka Polki & Pearl Drops',
+        category: 'earrings',
+        price: 185000,
+        comparePrice: null,
+        specs: 'Syndicate Polki • Basra Pearls • 22K Gold',
+        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80',
+        badge: 'Heritage'
+      },
+      {
+        id: 303,
+        title: 'Solitaire Diamond Studs (1.00 ct TW)',
+        category: 'earrings',
+        price: 165000,
+        comparePrice: 180000,
+        specs: '1.00 ct Total • 18K White Gold • Screw Back',
+        image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80',
+        badge: 'Bestseller'
+      },
+      {
+        id: 304,
+        title: 'Aria Diamond Huggie Hoops',
+        category: 'earrings',
+        price: 45000,
+        comparePrice: null,
+        specs: '0.28 ct Pavé • 18K Yellow Gold',
+        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80',
+        badge: 'Everyday'
+      }
+    ],
+
+    // Necklaces
+    necklaces: [
+      {
+        id: 401,
+        title: 'Maharani Polki & Emerald Choker',
+        category: 'necklaces',
+        price: 520000,
+        comparePrice: null,
+        specs: 'Uncut Diamonds • Zambian Emeralds • 22K Gold',
+        image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80',
+        badge: 'Bridal Heritage'
+      },
+      {
+        id: 402,
+        title: 'Lumière Diamond Teardrop Pendant',
+        category: 'necklaces',
+        price: 95000,
+        comparePrice: 110000,
+        specs: '0.65 ct Pear Cut • 18K Yellow Gold Chain',
+        image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Everyday Luxury'
+      },
+      {
+        id: 403,
+        title: 'Aura Diamond Rivière Necklace',
+        category: 'necklaces',
+        price: 680000,
+        comparePrice: null,
+        specs: '7.50 ct Diamonds • Platinum & 18K White Gold',
+        image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80',
+        badge: 'High Jewellery'
+      },
+      {
+        id: 404,
+        title: 'Traditional Mangalsutra Diamond Chain',
+        category: 'necklaces',
+        price: 78000,
+        comparePrice: 85000,
+        specs: 'Black Onyx Beads • 0.45 ct Diamonds • 18K Gold',
+        image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Mangalsutra'
+      }
+    ]
+  };
 
   // State
   let cart = [];
   let wishlist = new Set();
-  let currentCategory = 'all';
 
-  // --- Helper: Format Currency ---
-  function formatMoney(amount) {
-    return '₹ ' + amount.toLocaleString('en-IN');
+  function formatMoney(num) {
+    return '₹ ' + num.toLocaleString('en-IN');
   }
 
-  // --- 2. Render Product Grid ---
-  function renderProducts(categoryFilter = 'all') {
-    const grid = document.getElementById('FeaturedProductGrid');
-    if (!grid) return;
-
-    const filtered = categoryFilter === 'all' 
-      ? products 
-      : products.filter(p => p.category === categoryFilter);
-
-    let html = '';
-    filtered.forEach(product => {
-      const isWishlisted = wishlist.has(product.id);
-      html += `
-        <article class="product-card" data-product-id="${product.id}">
-          <div class="product-media">
-            ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
-            <button type="button" class="product-wishlist-btn ${isWishlisted ? 'is-active' : ''}" data-action="toggle-wishlist" data-id="${product.id}" aria-label="Add to wishlist">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
-            <img src="${product.imgPrimary}" alt="${product.title}" class="product-img product-img-primary" loading="lazy">
-            <img src="${product.imgSecondary}" alt="${product.title}" class="product-img product-img-secondary" loading="lazy">
-            <div class="product-quick-view">
-              <button type="button" class="quick-view-btn" data-action="quick-view" data-id="${product.id}">Quick View</button>
-            </div>
-          </div>
-          <div class="product-info">
-            <div class="product-metal-swatches">
-              <span class="metal-dot yg" title="18K Yellow Gold"></span>
-              <span class="metal-dot rg" title="18K Rose Gold"></span>
-              <span class="metal-dot wg" title="18K White Gold / Platinum"></span>
-            </div>
-            <h3 class="product-title"><a href="#" data-action="quick-view" data-id="${product.id}">${product.title}</a></h3>
-            <p class="product-specs">${product.specs}</p>
-            <div class="product-price">
-              <span>${formatMoney(product.price)}</span>
-              ${product.comparePrice ? `<span class="product-price-compare">${formatMoney(product.comparePrice)}</span>` : ''}
-            </div>
-          </div>
-        </article>
-      `;
-    });
-
-    grid.innerHTML = html;
+  // Toast Notification
+  function showToast(msg) {
+    let toast = document.getElementById('GlobalToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'GlobalToast';
+      toast.className = 'toast-msg';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.classList.add('is-active');
+    setTimeout(() => toast.classList.remove('is-active'), 2800);
   }
 
-  // --- 3. Category Tab Filtering ---
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      tabBtns.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      currentCategory = btn.getAttribute('data-tab');
-      renderProducts(currentCategory);
+  // --- 2. Render Helper for Clean Square Product Cards ---
+  function createProductCardHTML(p) {
+    const isWl = wishlist.has(p.id);
+    return `
+      <div class="product-card-clean" data-product-id="${p.id}">
+        <div class="product-media-square">
+          <button type="button" class="product-wishlist-toggle ${isWl ? 'is-active' : ''}" data-action="toggle-wishlist" data-id="${p.id}" aria-label="Save to Wishlist">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <img src="${p.image}" alt="${p.title}" class="product-cutout-img" loading="lazy" width="400" height="400">
+        </div>
+        <div class="product-meta-clean">
+          <h3 class="product-title-clean">
+            <a href="#" data-action="quick-view" data-id="${p.id}">${p.title}</a>
+          </h3>
+          <div class="product-price-clean">
+            <span>${formatMoney(p.price)}</span>
+            ${p.comparePrice ? `<span class="product-price-strike">${formatMoney(p.comparePrice)}</span>` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // --- 3. Render Initial Product Grids ---
+  // Section 05: Rings
+  const ringsGrid = document.getElementById('FeaturedRingsGrid');
+  if (ringsGrid) {
+    ringsGrid.innerHTML = catalog.rings.map(createProductCardHTML).join('');
+  }
+
+  // Section 06: Bangles
+  const banglesGrid = document.getElementById('FeaturedBanglesGrid');
+  if (banglesGrid) {
+    banglesGrid.innerHTML = catalog.bangles.map(createProductCardHTML).join('');
+  }
+
+  // Section 10: New Arrivals (4 items)
+  const newArrivalsGrid = document.getElementById('NewArrivalsGrid');
+  if (newArrivalsGrid) {
+    const newItems = [catalog.rings[0], catalog.bangles[1], catalog.earrings[0], catalog.necklaces[1]];
+    newArrivalsGrid.innerHTML = newItems.map(createProductCardHTML).join('');
+  }
+
+  // Section 11: Best Sellers (Interactive Tabs)
+  const bestSellersGrid = document.getElementById('BestSellersGrid');
+  function renderBestSellers(tab = 'rings') {
+    if (!bestSellersGrid) return;
+    const items = catalog[tab] || catalog.rings;
+    bestSellersGrid.innerHTML = items.map(createProductCardHTML).join('');
+  }
+  renderBestSellers('rings');
+
+  // Tab switcher
+  const bsTabs = document.querySelectorAll('.bs-tab-btn');
+  bsTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      bsTabs.forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      const cat = tab.getAttribute('data-category');
+      renderBestSellers(cat);
     });
   });
 
   // --- 4. Sticky Header State on Scroll ---
-  const header = document.querySelector('.site-header');
+  const header = document.getElementById('SiteHeader');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 40) {
       header.classList.add('is-scrolled');
@@ -185,79 +304,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- 5. Cart Drawer Management ---
   const cartDrawer = document.getElementById('CartDrawer');
-  const drawerOverlay = document.getElementById('DrawerOverlay');
+  const drawerBackdrop = document.getElementById('DrawerBackdrop');
   const cartOpenBtns = document.querySelectorAll('[data-action="open-cart"]');
   const cartCloseBtns = document.querySelectorAll('[data-action="close-cart"]');
   const cartBadge = document.getElementById('HeaderCartBadge');
-  const cartItemsList = document.getElementById('CartDrawerItems');
-  const cartSubtotalElem = document.getElementById('CartDrawerSubtotal');
-  const freeShippingBar = document.getElementById('FreeShippingMeter');
+  const cartItemsContainer = document.getElementById('CartDrawerItems');
+  const cartSubtotal = document.getElementById('CartDrawerSubtotal');
+  const shippingMeter = document.getElementById('FreeShippingMeter');
 
-  function openCartDrawer() {
+  function openCart() {
     if (cartDrawer) cartDrawer.classList.add('is-open');
-    if (drawerOverlay) drawerOverlay.classList.add('is-open');
+    if (drawerBackdrop) drawerBackdrop.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeCartDrawer() {
+  function closeAllDrawers() {
     if (cartDrawer) cartDrawer.classList.remove('is-open');
-    if (drawerOverlay) drawerOverlay.classList.remove('is-open');
+    const mobileMenu = document.getElementById('MobileMenuDrawer');
+    if (mobileMenu) mobileMenu.classList.remove('is-open');
+    const searchModal = document.getElementById('SearchModal');
+    if (searchModal) searchModal.classList.remove('is-open');
+    const quickView = document.getElementById('QuickViewModal');
+    if (quickView) quickView.classList.remove('is-open');
+    if (drawerBackdrop) drawerBackdrop.classList.remove('is-visible');
     document.body.style.overflow = '';
   }
 
-  cartOpenBtns.forEach(b => b.addEventListener('click', openCartDrawer));
-  cartCloseBtns.forEach(b => b.addEventListener('click', closeCartDrawer));
-  if (drawerOverlay) drawerOverlay.addEventListener('click', () => {
-    closeCartDrawer();
-    closeMobileMenu();
-    closeQuickView();
-  });
+  cartOpenBtns.forEach(btn => btn.addEventListener('click', openCart));
+  cartCloseBtns.forEach(btn => btn.addEventListener('click', closeAllDrawers));
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeAllDrawers);
 
   function updateCartUI() {
-    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+    const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
     if (cartBadge) cartBadge.textContent = totalCount;
-    if (cartSubtotalElem) cartSubtotalElem.textContent = formatMoney(subtotal);
+    if (cartSubtotal) cartSubtotal.textContent = formatMoney(totalAmount);
 
-    // Free shipping threshold: 50,000
-    if (freeShippingBar) {
-      const percent = Math.min(100, (subtotal / 50000) * 100);
-      freeShippingBar.style.width = percent + '%';
+    if (shippingMeter) {
+      const pct = Math.min(100, (totalAmount / 50000) * 100);
+      shippingMeter.style.width = pct + '%';
     }
 
-    if (!cartItemsList) return;
+    if (!cartItemsContainer) return;
 
     if (cart.length === 0) {
-      cartItemsList.innerHTML = `
-        <div style="text-align: center; padding: 3rem 1rem; color: var(--color-muted);">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="margin: 0 auto 1rem auto; color: var(--color-gold);">
+      cartItemsContainer.innerHTML = `
+        <div style="text-align: center; padding: 4rem 1rem; color: var(--color-muted);">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="margin: 0 auto 1rem auto; color: var(--color-gold);">
             <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
-          <p style="font-family: var(--font-serif); font-size: 18px; color: var(--color-primary-dark); margin-bottom: 0.5rem;">Your Shopping Bag is Empty</p>
-          <p style="font-size: 13px;">Discover our handcrafted diamond and polki collections.</p>
+          <p style="font-family: var(--font-display); font-size: 20px; color: var(--color-dark); margin-bottom: 0.4rem;">Your Shopping Bag is Empty</p>
+          <p style="font-size: 13px;">Explore our rings, bangles, and bridal collections.</p>
         </div>
       `;
       return;
     }
 
-    let itemsHtml = '';
+    let html = '';
     cart.forEach(item => {
-      itemsHtml += `
-        <div class="cart-item-row" style="display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border-light);">
-          <img src="${item.image}" alt="${item.title}" style="width: 72px; height: 96px; object-fit: cover; border-radius: 3px;">
+      html += `
+        <div style="display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border-light);">
+          <img src="${item.image}" alt="${item.title}" style="width: 72px; height: 72px; object-fit: contain; background: var(--color-bg-card); border-radius: 2px;">
           <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <h4 style="font-family: var(--font-serif); font-size: 15px; color: var(--color-primary-dark); line-height: 1.3;">${item.title}</h4>
-              <p style="font-size: 11.5px; color: var(--color-muted);">${item.metal || '18K Yellow Gold'}</p>
-              <div style="font-weight: 600; font-size: 13.5px; margin-top: 4px;">${formatMoney(item.price)}</div>
+              <h4 style="font-family: var(--font-sans); font-size: 13.5px; font-weight: 500; color: var(--color-dark); line-height: 1.3;">${item.title}</h4>
+              <div style="font-weight: 600; font-size: 13px; margin-top: 3px;">${formatMoney(item.price)}</div>
             </div>
             <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
               <div style="display: flex; align-items: center; border: 1px solid var(--color-border); border-radius: 2px;">
-                <button type="button" style="padding: 2px 8px; border: none; background: none; cursor: pointer;" data-action="cart-minus" data-id="${item.id}">−</button>
-                <span style="padding: 0 6px; font-size: 12px; font-weight: 600;">${item.quantity}</span>
-                <button type="button" style="padding: 2px 8px; border: none; background: none; cursor: pointer;" data-action="cart-plus" data-id="${item.id}">+</button>
+                <button type="button" style="padding: 2px 7px; border: none; background: none; cursor: pointer;" data-action="cart-minus" data-id="${item.id}">−</button>
+                <span style="padding: 0 6px; font-size: 12px; font-weight: 600;">${item.qty}</span>
+                <button type="button" style="padding: 2px 7px; border: none; background: none; cursor: pointer;" data-action="cart-plus" data-id="${item.id}">+</button>
               </div>
               <button type="button" style="background: none; border: none; font-size: 11.5px; color: var(--color-muted); text-decoration: underline; cursor: pointer;" data-action="cart-remove" data-id="${item.id}">Remove</button>
             </div>
@@ -265,122 +384,131 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       `;
     });
-
-    cartItemsList.innerHTML = itemsHtml;
+    cartItemsContainer.innerHTML = html;
   }
 
-  function addToCart(productId, metal = '18K Yellow Gold') {
-    const product = products.find(p => p.id === parseInt(productId, 10));
-    if (!product) return;
+  function addToCart(id) {
+    let itemData = null;
+    Object.values(catalog).forEach(arr => {
+      const found = arr.find(p => p.id === parseInt(id, 10));
+      if (found) itemData = found;
+    });
+    if (!itemData) return;
 
-    const existingIndex = cart.findIndex(item => item.id === product.id && item.metal === metal);
-    if (existingIndex > -1) {
-      cart[existingIndex].quantity += 1;
+    const exist = cart.find(i => i.id === itemData.id);
+    if (exist) {
+      exist.qty += 1;
     } else {
       cart.push({
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        image: product.imgPrimary,
-        metal: metal,
-        quantity: 1
+        id: itemData.id,
+        title: itemData.title,
+        price: itemData.price,
+        image: itemData.image,
+        qty: 1
       });
     }
 
     updateCartUI();
-    openCartDrawer();
+    openCart();
+    showToast(`Added "${itemData.title}" to bag`);
   }
 
   // --- 6. Quick View Modal ---
-  const modalOverlay = document.getElementById('QuickViewModal');
+  const quickViewModal = document.getElementById('QuickViewModal');
+  const quickViewBody = document.getElementById('QuickViewBody');
   const modalCloseBtn = document.getElementById('ModalCloseBtn');
-  const modalBody = document.getElementById('QuickViewBody');
 
-  function openQuickView(productId) {
-    const p = products.find(prod => prod.id === parseInt(productId, 10));
-    if (!p || !modalBody) return;
+  function openQuickView(id) {
+    let p = null;
+    Object.values(catalog).forEach(arr => {
+      const found = arr.find(item => item.id === parseInt(id, 10));
+      if (found) p = found;
+    });
+    if (!p || !quickViewBody) return;
 
-    modalBody.innerHTML = `
-      <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; padding: 2rem;">
-        <div>
-          <img src="${p.imgPrimary}" alt="${p.title}" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; box-shadow: var(--shadow-subtle);">
+    quickViewBody.innerHTML = `
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 2.5rem;">
+        <div style="background: var(--color-bg-card); display: flex; align-items: center; justify-content: center; padding: 2rem; border-radius: 4px;">
+          <img src="${p.image}" alt="${p.title}" style="max-width: 90%; max-height: 320px; object-fit: contain;">
         </div>
         <div style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            ${p.badge ? `<span style="font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-gold-dark);">${p.badge}</span>` : ''}
-            <h2 style="font-size: 26px; margin: 0.35rem 0 0.5rem 0;">${p.title}</h2>
-            <div style="font-size: 20px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 0.75rem;">
+            ${p.badge ? `<span style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-gold-dark);">${p.badge}</span>` : ''}
+            <h2 style="font-size: 26px; margin: 0.4rem 0 0.6rem 0;">${p.title}</h2>
+            <div style="font-size: 20px; font-weight: 600; color: var(--color-dark); margin-bottom: 0.85rem;">
               ${formatMoney(p.price)}
               ${p.comparePrice ? `<span style="font-size: 14px; color: var(--color-subtle); text-decoration: line-through; margin-left: 8px;">${formatMoney(p.comparePrice)}</span>` : ''}
             </div>
-            <p style="font-size: 13.5px; color: var(--color-muted); line-height: 1.6; margin-bottom: 1.25rem;">${p.description}</p>
             
-            <div style="padding: 0.85rem; background: var(--color-bg-surface-subtle); border-radius: 4px; border: 1px solid var(--color-border); font-size: 12px; margin-bottom: 1.5rem;">
+            <div style="padding: 1rem; background: var(--color-bg-main); border-radius: 4px; border: 1px solid var(--color-border); font-size: 12.5px; margin-bottom: 1.5rem;">
               <strong>Hallmark & Certification:</strong><br>
               ${p.specs}
             </div>
 
             <div style="margin-bottom: 1.5rem;">
               <label style="font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.4rem;">Select Metal Purity:</label>
-              <select id="ModalMetalSelect" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-border); border-radius: 3px; font-size: 13px;">
-                <option value="18K Yellow Gold">18K Yellow Gold (Standard)</option>
-                <option value="18K Rose Gold">18K Rose Gold</option>
-                <option value="18K White Gold / Platinum">18K White Gold / Platinum</option>
+              <select style="width: 100%; padding: 0.65rem; border: 1px solid var(--color-border); border-radius: 2px; font-size: 13px;">
+                <option>18K Yellow Gold (Standard)</option>
+                <option>18K Rose Gold</option>
+                <option>18K White Gold / 950 Platinum</option>
               </select>
             </div>
           </div>
 
-          <button type="button" class="btn btn-gold" id="ModalAddToCartBtn" data-id="${p.id}" style="width: 100%; padding: 1rem;">
+          <button type="button" class="btn btn-gold" id="ModalAddBtn" data-id="${p.id}" style="width: 100%; padding: 1rem;">
             Add to Shopping Bag
           </button>
         </div>
       </div>
     `;
 
-    if (modalOverlay) modalOverlay.classList.add('is-open');
+    if (quickViewModal) quickViewModal.classList.add('is-open');
+    if (drawerBackdrop) drawerBackdrop.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
 
-    const addBtn = document.getElementById('ModalAddToCartBtn');
+    const addBtn = document.getElementById('ModalAddBtn');
     if (addBtn) {
       addBtn.addEventListener('click', function() {
-        const metalSelect = document.getElementById('ModalMetalSelect');
-        const metalVal = metalSelect ? metalSelect.value : '18K Yellow Gold';
-        closeQuickView();
-        addToCart(p.id, metalVal);
+        closeAllDrawers();
+        addToCart(p.id);
       });
     }
   }
 
-  function closeQuickView() {
-    if (modalOverlay) modalOverlay.classList.remove('is-open');
-    document.body.style.overflow = '';
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeAllDrawers);
+
+  // --- 7. Search Modal ---
+  const searchModal = document.getElementById('SearchModal');
+  const searchOpenBtn = document.getElementById('SearchOpenBtn');
+  const searchCloseBtn = document.getElementById('SearchCloseBtn');
+
+  if (searchOpenBtn) {
+    searchOpenBtn.addEventListener('click', function() {
+      if (searchModal) searchModal.classList.add('is-open');
+      if (drawerBackdrop) drawerBackdrop.classList.add('is-visible');
+      const input = document.getElementById('SearchInput');
+      if (input) setTimeout(() => input.focus(), 150);
+    });
   }
+  if (searchCloseBtn) searchCloseBtn.addEventListener('click', closeAllDrawers);
 
-  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeQuickView);
-
-  // --- 7. Mobile Menu Drawer ---
+  // --- 8. Mobile Navigation Drawer ---
+  const mobileNavToggle = document.getElementById('MobileNavToggle');
   const mobileMenuDrawer = document.getElementById('MobileMenuDrawer');
-  const mobileMenuOpenBtn = document.getElementById('MobileMenuOpenBtn');
-  const mobileMenuCloseBtn = document.getElementById('MobileMenuCloseBtn');
+  const mobileMenuClose = document.getElementById('MobileMenuClose');
 
-  function openMobileMenu() {
-    if (mobileMenuDrawer) mobileMenuDrawer.classList.add('is-open');
-    if (drawerOverlay) drawerOverlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
+  if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', function() {
+      if (mobileMenuDrawer) mobileMenuDrawer.classList.add('is-open');
+      if (drawerBackdrop) drawerBackdrop.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    });
   }
+  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeAllDrawers);
 
-  function closeMobileMenu() {
-    if (mobileMenuDrawer) mobileMenuDrawer.classList.remove('is-open');
-    if (drawerOverlay) drawerOverlay.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  if (mobileMenuOpenBtn) mobileMenuOpenBtn.addEventListener('click', openMobileMenu);
-  if (mobileMenuCloseBtn) mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
-
-  // --- 8. Global Event Delegation ---
+  // --- 9. Global Click Delegation (Wishlist, Quick View, Cart Qty) ---
   document.addEventListener('click', function(e) {
-    // Quick View
+    // Quick View Click
     const qvBtn = e.target.closest('[data-action="quick-view"]');
     if (qvBtn) {
       e.preventDefault();
@@ -389,7 +517,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // Toggle Wishlist
+    // Wishlist Toggle
     const wlBtn = e.target.closest('[data-action="toggle-wishlist"]');
     if (wlBtn) {
       e.preventDefault();
@@ -397,35 +525,37 @@ document.addEventListener('DOMContentLoaded', function() {
       if (wishlist.has(id)) {
         wishlist.delete(id);
         wlBtn.classList.remove('is-active');
+        showToast('Removed from Wishlist');
       } else {
         wishlist.add(id);
         wlBtn.classList.add('is-active');
+        showToast('Saved to Wishlist');
       }
-      const wlBadge = document.getElementById('HeaderWishlistBadge');
-      if (wlBadge) wlBadge.textContent = wishlist.size;
+      const badge = document.getElementById('HeaderWishlistBadge');
+      if (badge) badge.textContent = wishlist.size;
       return;
     }
 
-    // Cart Quantity Increment
+    // Cart Plus
     const plusBtn = e.target.closest('[data-action="cart-plus"]');
     if (plusBtn) {
       const id = parseInt(plusBtn.getAttribute('data-id'), 10);
       const item = cart.find(i => i.id === id);
       if (item) {
-        item.quantity += 1;
+        item.qty += 1;
         updateCartUI();
       }
       return;
     }
 
-    // Cart Quantity Decrement
+    // Cart Minus
     const minusBtn = e.target.closest('[data-action="cart-minus"]');
     if (minusBtn) {
       const id = parseInt(minusBtn.getAttribute('data-id'), 10);
       const item = cart.find(i => i.id === id);
       if (item) {
-        item.quantity -= 1;
-        if (item.quantity <= 0) {
+        item.qty -= 1;
+        if (item.qty <= 0) {
           cart = cart.filter(i => i.id !== id);
         }
         updateCartUI();
@@ -434,16 +564,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Cart Remove
-    const removeBtn = e.target.closest('[data-action="cart-remove"]');
-    if (removeBtn) {
-      const id = parseInt(removeBtn.getAttribute('data-id'), 10);
+    const remBtn = e.target.closest('[data-action="cart-remove"]');
+    if (remBtn) {
+      const id = parseInt(remBtn.getAttribute('data-id'), 10);
       cart = cart.filter(i => i.id !== id);
       updateCartUI();
       return;
     }
   });
 
-  // Initial setup
-  renderProducts('all');
+  // Initial cart UI
   updateCartUI();
 });
