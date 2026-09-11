@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotus Jewellers — Fine Jewellery, Solitaires & Bridal Heritage</title>
+  <meta name="description" content="Discover exquisite handcrafted fine jewellery, GIA-certified solitaire diamonds, royal polki bridal sets, and 22K hallmarked gold masterworks from Lotus Jewellers.">
+  
+  <!-- Google Fonts: Cormorant Garamond, Montserrat & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. TOP ANNOUNCEMENT BAR
+       ========================================================================= -->
+  <aside class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="announcement-text">
+      <span class="announcement-sparkle">✦</span>
+      <span>Complimentary Fully Insured Worldwide Courier & Lifetime Buyback Guarantee</span>
+      <span class="announcement-sparkle">✦</span>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. LUXURY HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header" id="SiteHeader">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Left: Mobile Menu Trigger & Currency -->
+        <div class="header-left">
+          <button type="button" class="mobile-menu-toggle" id="MobileMenuOpenBtn" aria-label="Open Navigation Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button type="button" class="currency-selector" aria-label="Currency Selector">
+            <span>IN (₹ INR)</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+              <path d="M0 0l5 6 5-6z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center: Brand Emblem & Typography -->
+        <div class="header-center">
+          <a href="index.html" class="brand-logo-link" aria-label="Lotus Jewellers Home">
+            <div class="brand-logo-mark">
+              <!-- Elegant Lotus Petals Vector -->
+              <svg width="32" height="26" viewBox="0 0 36 28" fill="currentColor">
+                <path d="M18 2C16.8 6.5 13.5 12 8 16C12.5 16 16.5 14 18 10C19.5 14 23.5 16 28 16C22.5 12 19.2 6.5 18 2Z" fill="currentColor"/>
+                <path d="M18 10C16 14.5 11 20 2 22C7 23 14 21 18 16C22 21 29 23 34 22C25 20 20 14.5 18 10Z" opacity="0.85" fill="currentColor"/>
+                <path d="M18 17C14.5 20.5 9 24.5 3 25C9 26 15 24 18 20C21 24 27 26 33 25C27 24.5 21.5 20.5 18 17Z" opacity="0.6" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="brand-logo-title">Lotus</span>
+            <span class="brand-logo-subtitle">Jewellers • Estd 1988</span>
+          </a>
+        </div>
+
+        <!-- Right: Search, Wishlist & Cart Drawer Actions -->
+        <div class="header-right">
+          <button type="button" class="header-action-btn" aria-label="Search Collection">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          
+          <button type="button" class="header-action-btn" aria-label="View Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="header-badge" id="HeaderWishlistBadge">0</span>
+          </button>
+
+          <button type="button" class="header-action-btn" data-action="open-cart" aria-label="View Shopping Bag">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="header-badge" id="HeaderCartBadge">0</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Desktop Mega Menu Links -->
+      <nav class="desktop-nav-wrap" aria-label="Main Navigation">
+        <ul class="desktop-nav-list">
+          <li><a href="#featured" class="nav-link is-active">High Jewellery</a></li>
+          <li><a href="#categories" class="nav-link">Bridal Regalia</a></li>
+          <li><a href="#featured" class="nav-link">Solitaire Rings</a></li>
+          <li><a href="#featured" class="nav-link">Necklaces & Chokers</a></li>
+          <li><a href="#featured" class="nav-link">Polki & Kundan</a></li>
+          <li><a href="#bespoke" class="nav-link is-highlight">Bespoke Concierge</a></li>
+          <li><a href="#craftsmanship" class="nav-link">The Heritage</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. HERO SHOWCASE SECTION
+       ========================================================================= -->
+  <section class="hero-section" aria-label="Featured Showcase">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=85" alt="Lotus Jewellers Fine High Jewellery Showcase" class="hero-bg-img">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container" style="position: relative; z-index: 3; width: 100%;">
+      <div class="hero-content">
+        <span class="hero-tagline">
+          <span>✦</span>
+          <span>The Haute Joaillerie Collection</span>
+        </span>
+        <h1 class="hero-title">
+          Timeless Splendour, <em>Crafted to Perfection</em>
+        </h1>
+        <p class="hero-desc">
+          Unrivalled certified natural diamonds, royal uncut polki, and 22K hallmarked gold masterworks created with over 35 years of royal heritage.
+        </p>
+        <div class="hero-actions">
+          <a href="#featured" class="btn btn-gold">Explore Collection</a>
+          <a href="#bespoke" class="btn btn-outline-gold">Book Private Viewing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Pillars Floating Bar -->
+    <div class="hero-trust-bar">
+      <div class="container">
+        <ul class="trust-pillars-list">
+          <li class="trust-pillar-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>BIS 916 Hallmarked Gold</span>
+          </li>
+          <li class="trust-pillar-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>GIA & IGI Certified Diamonds</span>
+          </li>
+          <li class="trust-pillar-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>100% Lifetime Buyback</span>
+          </li>
+          <li class="trust-pillar-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <span>Insured Global Delivery</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. CURATED CATEGORIES (ARCHED VISUAL CAROUSEL)
+       ========================================================================= -->
+  <section class="categories-section" id="categories" aria-label="Curated Categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Exquisite Universes</span>
+        <h2 class="section-title">Curated For Every Occasion</h2>
+        <p class="section-subtitle">From monumental bridal heirlooms to everyday diamond solitaires, discover masterworks designed to be cherished for lifetimes.</p>
+      </div>
+
+      <div class="categories-grid">
+        
+        <!-- Category 1: Solitaire Rings -->
+        <a href="#featured" class="category-card" data-cat="solitaire">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Solitaire Rings" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Solitaire Rings</h3>
+          <span class="category-count">140 Designs</span>
+        </a>
+
+        <!-- Category 2: Bridal Sets -->
+        <a href="#featured" class="category-card" data-cat="bridal">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Bridal Regalia" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Bridal Regalia</h3>
+          <span class="category-count">85 Sets</span>
+        </a>
+
+        <!-- Category 3: Diamond Earrings -->
+        <a href="#featured" class="category-card" data-cat="earrings">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80" alt="Diamond Earrings" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Diamond Earrings</h3>
+          <span class="category-count">110 Designs</span>
+        </a>
+
+        <!-- Category 4: Royal Necklaces -->
+        <a href="#featured" class="category-card" data-cat="necklaces">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80" alt="Royal Necklaces" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Royal Necklaces</h3>
+          <span class="category-count">92 Pieces</span>
+        </a>
+
+        <!-- Category 5: Bangles & Bracelets -->
+        <a href="#featured" class="category-card" data-cat="bracelets">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=600&q=80" alt="Gold & Diamond Bangles" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Bangles & Kadas</h3>
+          <span class="category-count">64 Designs</span>
+        </a>
+
+        <!-- Category 6: Polki & Heritage -->
+        <a href="#featured" class="category-card" data-cat="bridal">
+          <div class="category-media-arch">
+            <img src="https://images.unsplash.com/photo-1611591477858-a963212fb943?auto=format&fit=crop&w=600&q=80" alt="Polki & Heritage Jewels" class="category-img" loading="lazy">
+          </div>
+          <h3 class="category-title">Polki & Jadau</h3>
+          <span class="category-count">78 Masterpieces</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FEATURED COLLECTION & INTERACTIVE PRODUCT GRID
+       ========================================================================= -->
+  <section class="featured-collection-section" id="featured" aria-label="Featured Collection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Signature Creations</span>
+        <h2 class="section-title">The Masterpiece Gallery</h2>
+        <p class="section-subtitle">Explore our most celebrated solitaire rings, polki necklaces, and fine diamond creations.</p>
+      </div>
+
+      <!-- Tab Filters -->
+      <nav class="collection-tabs" aria-label="Product Category Filter">
+        <button type="button" class="tab-btn is-active" data-tab="all">All Masterpieces</button>
+        <button type="button" class="tab-btn" data-tab="solitaire">Solitaire Rings</button>
+        <button type="button" class="tab-btn" data-tab="bridal">Bridal & Polki</button>
+        <button type="button" class="tab-btn" data-tab="earrings">Diamond Earrings</button>
+        <button type="button" class="tab-btn" data-tab="necklaces">Necklaces</button>
+        <button type="button" class="tab-btn" data-tab="bracelets">Bangles & Tennis</button>
+      </nav>
+
+      <!-- Dynamic Product Grid Container -->
+      <div class="product-grid" id="FeaturedProductGrid" role="list">
+        <!-- Rendered dynamically by assets/js/main.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#bespoke" class="btn btn-outline-dark">View Entire Vault</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. THE ART OF CRAFTSMANSHIP / HERITAGE STORY
+       ========================================================================= -->
+  <section class="craftsmanship-section" id="craftsmanship" aria-label="Craftsmanship and Heritage">
+    <div class="container">
+      <div class="craft-grid">
+        
+        <div class="craft-media">
+          <img src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=800&q=80" alt="Master artisan handcrafting jewellery at Lotus Jewellers" class="craft-img-main" loading="lazy">
+          <div class="craft-badge-floating">
+            <div class="craft-badge-num">35+</div>
+            <div class="craft-badge-label">Years of Heritage</div>
+          </div>
+        </div>
+
+        <div class="craft-content">
+          <span class="section-eyebrow">The Atelier</span>
+          <h2 class="craft-title">A Heritage of Uncompromising Craftsmanship</h2>
+          <p class="craft-desc">
+            Since 1988, Lotus Jewellers has represented the zenith of Indian fine jewellery. Each creation is brought to life over hundreds of hours by generational karigars, combining timeless ancestral jadau techniques with modern Swiss micro-setting accuracy.
+          </p>
+
+          <div class="craft-features">
+            <div class="craft-feature-item">
+              <h3 class="craft-feature-title">Ethically Sourced</h3>
+              <p class="craft-feature-desc">100% conflict-free natural diamonds, sourced directly from Kimberley Process certified mines.</p>
+            </div>
+            <div class="craft-feature-item">
+              <h3 class="craft-feature-title">Micro-Pavé Precision</h3>
+              <p class="craft-feature-desc">Flawless diamond prongs inspected under 40x gemological microscopes for lifetime security.</p>
+            </div>
+            <div class="craft-feature-item">
+              <h3 class="craft-feature-title">Generational Karigars</h3>
+              <p class="craft-feature-desc">Handcrafted by master goldsmiths upholding centuries-old royal Rajasthani court traditions.</p>
+            </div>
+            <div class="craft-feature-item">
+              <h3 class="craft-feature-title">Govt. BIS Certified</h3>
+              <p class="craft-feature-desc">Every milligram of 18K and 22K gold is hallmarked with official 6-digit HUID purity codes.</p>
+            </div>
+          </div>
+
+          <a href="#bespoke" class="btn btn-gold">Discover The Atelier</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. BESPOKE BRIDAL & CUSTOM CONCIERGE BANNER
+       ========================================================================= -->
+  <section class="bespoke-section" id="bespoke" aria-label="Bespoke Jewellery Concierge">
+    <div class="container">
+      <div class="bespoke-box">
+        
+        <div>
+          <span class="section-eyebrow">Bespoke Concierge</span>
+          <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); margin-bottom: 0.85rem;">Bring Your Dream Jewel To Life</h2>
+          <p style="font-size: 14.5px; color: var(--color-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+            Collaborate 1-on-1 with our master jewellery designers and gemologists. From custom solitaire engagement rings to complete bridal trousseaus, we craft one-of-a-kind treasures with 3D CAD previews and hand-selected stones.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 13px; color: var(--color-charcoal); margin-bottom: 1.5rem;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--color-gold);">✓</span> Personal Gemological Diamond Selection (4Cs Inspection)
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--color-gold);">✓</span> High-Definition 3D CAD Renders Before Production
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--color-gold);">✓</span> Private VIP Salon or Virtual Video Consultations
+            </li>
+          </ul>
+        </div>
+
+        <form class="bespoke-form" onsubmit="event.preventDefault(); alert('Thank you! Our master jewellery concierge will contact you within 24 hours to schedule your private consultation.');">
+          <div class="form-group">
+            <label class="form-label" for="ConciergeName">Full Name</label>
+            <input type="text" id="ConciergeName" class="form-input" placeholder="e.g. Ananya Sharma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ConciergePhone">Phone / WhatsApp</label>
+            <input type="tel" id="ConciergePhone" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ConciergeCategory">Jewellery Type of Interest</label>
+            <select id="ConciergeCategory" class="form-select">
+              <option value="engagement">Solitaire Engagement Ring</option>
+              <option value="bridal">Complete Bridal Trousseau</option>
+              <option value="polki">Polki / Heritage Jadau Choker</option>
+              <option value="custom">Custom Family Heirloom Remodelling</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold" style="margin-top: 0.5rem; width: 100%;">
+            Book Private Consultation
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. TESTIMONIALS & PRESS
+       ========================================================================= -->
+  <section class="testimonials-section" aria-label="Client Testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Patron Love</span>
+        <h2 class="section-title">Words From Our Collectors</h2>
+        <p class="section-subtitle">Cherished memories crafted for milestones that last an eternity.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">"The craftsmanship on my Maharani Polki Choker left our entire wedding party speechless. The quality of emeralds and polki diamonds is unmatched in the industry."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Rhea Kapoor" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Rhea & Karan Mehta</div>
+              <div class="author-detail">Mumbai • Bridal Patron</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">"Ordered a 2ct solitaire engagement ring through their bespoke concierge. The GIA grading was impeccable and the four-prong lotus setting is breathtaking."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Aditya Sen" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Aditya Sengupta</div>
+              <div class="author-detail">Delhi • Solitaire Collector</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">"Lotus Jewellers represents royal heritage with modern refinement. Their transparent pricing, hallmarking, and lifetime buyback give complete peace of mind."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Dr. Meera Iyer" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Dr. Meera Iyer</div>
+              <div class="author-detail">Bangalore • High Jewellery Collector</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. INSTAGRAM & SOCIAL EDITORIAL GALLERY
+       ========================================================================= -->
+  <section class="insta-section" aria-label="Social Editorial Gallery">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="section-eyebrow">@LotusJewellers</span>
+      <h2 style="font-size: 24px;">Follow Our Journey on Instagram</h2>
+    </div>
+
+    <div class="insta-grid">
+      <a href="#" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Lotus Jewellers Editorial 1" class="insta-img" loading="lazy">
+        <div class="insta-overlay">
+          <span>✦ View Post</span>
+        </div>
+      </a>
+      <a href="#" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Lotus Jewellers Editorial 2" class="insta-img" loading="lazy">
+        <div class="insta-overlay">
+          <span>✦ View Post</span>
+        </div>
+      </a>
+      <a href="#" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80" alt="Lotus Jewellers Editorial 3" class="insta-img" loading="lazy">
+        <div class="insta-overlay">
+          <span>✦ View Post</span>
+        </div>
+      </a>
+      <a href="#" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=600&q=80" alt="Lotus Jewellers Editorial 4" class="insta-img" loading="lazy">
+        <div class="insta-overlay">
+          <span>✦ View Post</span>
+        </div>
+      </a>
+      <a href="#" class="insta-item">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Lotus Jewellers Editorial 5" class="insta-img" loading="lazy">
+        <div class="insta-overlay">
+          <span>✦ View Post</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. COMPREHENSIVE LUXURY FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand Story -->
+        <div class="footer-brand">
+          <span class="brand-logo-title" style="font-size: 26px;">Lotus</span>
+          <span class="brand-logo-subtitle" style="display: block; margin-top: 2px;">Jewellers • Estd 1988</span>
+          <p class="footer-desc">
+            Creators of fine diamonds, royal polki trousseaus, and 22K hallmarked heritage jewellery. Crafted with uncompromising passion for over three decades.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Instagram">IG</a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook">FB</a>
+            <a href="#" class="social-icon-btn" aria-label="Pinterest">PIN</a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <!-- Col 2: The Vault -->
+        <div>
+          <h3 class="footer-col-title">The Vault</h3>
+          <ul class="footer-links">
+            <li><a href="#featured">Solitaire Diamond Rings</a></li>
+            <li><a href="#featured">Bridal & Polki Sets</a></li>
+            <li><a href="#featured">Chokers & Necklaces</a></li>
+            <li><a href="#featured">Diamond Earrings</a></li>
+            <li><a href="#featured">Solid Gold Bangles</a></li>
+            <li><a href="#bespoke">Bespoke Custom Jewels</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Boutiques & Care -->
+        <div>
+          <h3 class="footer-col-title">Flagships & Concierge</h3>
+          <ul class="footer-links">
+            <li><a href="#">Mumbai Flagship: Bandra West</a></li>
+            <li><a href="#">Delhi Flagship: South Extension</a></li>
+            <li><a href="#">London Private Salon: Mayfair</a></li>
+            <li><a href="#">The 4Cs Diamond Education</a></li>
+            <li><a href="#">Lifetime Purity & Buyback</a></li>
+            <li><a href="#">Jewellery Care Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h3 class="footer-col-title">The Lotus Circle</h3>
+          <p class="footer-newsletter-text">
+            Subscribe for private vault previews, bespoke high jewellery unveils, and seasonal private saleroom invitations.
+          </p>
+          <form class="footer-form" onsubmit="event.preventDefault(); alert('Welcome to the Lotus Circle. Your private invitation will arrive shortly.');">
+            <input type="email" class="footer-input" placeholder="Enter your email address" required>
+            <button type="submit" class="footer-submit">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Lotus Jewellers Private Limited. All Rights Reserved. Designed for Shopify Store Reference.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Hallmark & Certifications</a>
+          <a href="#">Site Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. MODALS & DRAWERS
+       ========================================================================= -->
+
+  <!-- Drawer Backdrop Overlay -->
+  <div class="drawer-overlay" id="DrawerOverlay"></div>
+
+  <!-- A. Slide-Out Shopping Bag Drawer -->
+  <aside class="side-drawer" id="CartDrawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Shopping Bag</h3>
+      <button type="button" class="drawer-close-btn" data-action="close-cart" aria-label="Close Shopping Bag">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div style="padding: 0.85rem 1.5rem; background: var(--color-bg-surface-subtle); border-bottom: 1px solid var(--color-border);">
+      <div style="font-size: 11.5px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 5px;">
+        ✦ Complimentary Insured Delivery on orders over ₹50,000
+      </div>
+      <div style="width: 100%; height: 4px; background: var(--color-border); border-radius: 2px; overflow: hidden;">
+        <div id="FreeShippingMeter" style="width: 0%; height: 100%; background: var(--color-gold); transition: width 0.3s ease;"></div>
+      </div>
+    </div>
+
+    <div class="drawer-body" id="CartDrawerItems">
+      <!-- Populated dynamically by JS -->
+    </div>
+
+    <div class="drawer-footer">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Estimated Subtotal</span>
+        <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 700; color: var(--color-primary-dark);" id="CartDrawerSubtotal">₹ 0</span>
+      </div>
+      <button type="button" class="btn btn-gold" style="width: 100%; padding: 1.1rem;" onclick="alert('Proceeding to Shopify Secure Checkout...');">
+        Proceed To Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- B. Slide-Out Mobile Navigation Drawer -->
+  <aside class="side-drawer side-drawer-left" id="MobileMenuDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Lotus Jewellers</h3>
+      <button type="button" class="drawer-close-btn" id="MobileMenuCloseBtn" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="drawer-body">
+      <ul style="display: flex; flex-direction: column; gap: 1.25rem; font-family: var(--font-serif); font-size: 20px;">
+        <li><a href="#featured">High Jewellery Vault</a></li>
+        <li><a href="#categories">Bridal & Polki Regalia</a></li>
+        <li><a href="#featured">Solitaire Diamond Rings</a></li>
+        <li><a href="#featured">Necklaces & Chokers</a></li>
+        <li><a href="#featured">Diamond Earrings</a></li>
+        <li><a href="#featured">Solid Gold Bangles</a></li>
+        <li><a href="#bespoke" style="color: var(--color-gold-dark);">Bespoke Concierge</a></li>
+        <li><a href="#craftsmanship">The 35-Year Heritage</a></li>
+      </ul>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); font-size: 13px; color: var(--color-muted);">
+        <p><strong>Flagship Boutiques:</strong><br>Mumbai • Delhi • London</p>
+        <p style="margin-top: 0.5rem;"><strong>Direct Concierge:</strong><br>+91 98765 43210</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- C. Quick View Modal -->
+  <div class="modal-overlay" id="QuickViewModal" aria-modal="true" role="dialog">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" id="ModalCloseBtn" aria-label="Close Quick View">✕</button>
+      <div id="QuickViewBody">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript Logic -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
