@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LOTUS JEWELLERS — HOMEPAGE BLUEPRINT DESIGN SYSTEM & STYLESHEET
+   LOTUS JEWELLERS — QUIET LUXURY COLOR & TYPOGRAPHY SYSTEM
    ========================================================================== */
 
 :root {
@@ -8,41 +8,38 @@
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-accent: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
 
-  /* Luxury Color Palette */
-  --color-dark: #111315;
-  --color-dark-surface: #181A1D;
-  --color-charcoal: #2A2D30;
-  --color-body: #4A4D52;
-  --color-muted: #74787E;
-  --color-subtle: #A0A4AB;
+  /* Primary Brand Colors — Deep Forest Green */
+  --color-primary: #093729;
+  --color-primary-dark: #062B20;
 
-  /* Luxury Gold Accents */
-  --color-gold: #C5A880;
-  --color-gold-light: #E2D2BC;
-  --color-gold-dark: #9E7D52;
-  --color-gold-bg: #F5EFEB;
-  --color-gold-glow: rgba(197, 168, 128, 0.22);
-  --color-gold-gradient: linear-gradient(135deg, #E2D2BC 0%, #C5A880 50%, #9E7D52 100%);
+  /* Backgrounds */
+  --color-background: #FEFEFE;
+  --color-background-warm: #F2E9E1;
+  --color-background-muted: #E0D8D0;
+  --color-card-bg: #F8F5F1;
 
-  /* Backgrounds & Neutral Surfaces */
-  --color-bg-main: #FAF8F5;
-  --color-bg-surface: #FFFFFF;
-  --color-bg-subtle: #F6F3EE;
-  --color-bg-card: #F9F7F4;
-  --color-bg-cream: #F3ECE3;
+  /* Typography Colors */
+  --color-text-primary: #1E2420;
+  --color-text-secondary: #6F6A64;
+  --color-text-muted: #9B948C;
 
   /* Borders & Dividers */
-  --color-border: #E8E3DA;
-  --color-border-light: #F0ECE4;
-  --color-border-dark: #2A2D33;
+  --color-border: #D8D0C8;
+  --color-border-subtle: #E8E2DA;
+  --color-border-taupe: #CBC0B6;
+
+  /* Gold & Brown Accents (Used Sparingly) */
+  --color-gold: #B89762;
+  --color-gold-light: #C2A46D;
+  --color-brown-accent: #7C6450;
 
   /* Layout & Elevations */
   --max-width: 1440px;
-  --header-height: 86px;
+  --header-height: 84px;
   --announcement-height: 38px;
-  --shadow-subtle: 0 4px 20px rgba(17, 19, 21, 0.04);
-  --shadow-medium: 0 10px 32px rgba(17, 19, 21, 0.08);
-  --shadow-drawer: -12px 0 40px rgba(17, 19, 21, 0.16);
+  --shadow-subtle: 0 4px 20px rgba(9, 55, 41, 0.04);
+  --shadow-medium: 0 10px 30px rgba(9, 55, 41, 0.07);
+  --shadow-drawer: -10px 0 40px rgba(6, 43, 32, 0.16);
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-pill: 9999px;
@@ -65,8 +62,8 @@ html {
 }
 
 body {
-  background-color: var(--color-bg-main);
-  color: var(--color-body);
+  background-color: var(--color-background);
+  color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 400;
@@ -79,18 +76,18 @@ body {
 /* Typography Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: clamp(2.4rem, 4.8vw, 4.4rem); }
+h1 { font-size: clamp(2.4rem, 4.6vw, 4.2rem); }
 h2 { font-size: clamp(1.85rem, 3.2vw, 2.75rem); }
 h3 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); }
 h4 { font-size: 1.15rem; }
 h5 { font-size: 1rem; }
-h6 { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; }
+h6 { font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; }
 
 p { margin-bottom: 0.85rem; }
 p:last-child { margin-bottom: 0; }
@@ -135,7 +132,7 @@ ul, ol { list-style: none; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.24em;
-  color: var(--color-gold-dark);
+  color: var(--color-gold);
   margin-bottom: 0.65rem;
   display: inline-flex;
   align-items: center;
@@ -146,26 +143,26 @@ ul, ol { list-style: none; }
 .section-eyebrow::after {
   content: "";
   display: inline-block;
-  width: 24px;
+  width: 20px;
   height: 1px;
-  background-color: var(--color-gold);
+  background-color: var(--color-border);
 }
 
 .section-title {
   font-size: clamp(2rem, 3.4vw, 2.9rem);
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   margin-bottom: 0.75rem;
   font-weight: 500;
 }
 
 .section-subtitle {
   font-size: 14.5px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   font-weight: 300;
   line-height: 1.7;
 }
 
-/* Buttons */
+/* Button System (Deep Forest Green Primary) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -185,51 +182,53 @@ ul, ol { list-style: none; }
   text-align: center;
 }
 
-.btn-gold {
-  background-color: var(--color-gold);
+.btn-primary {
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border-color: var(--color-gold);
+  border-color: var(--color-primary);
 }
 
-.btn-gold:hover {
-  background-color: var(--color-gold-dark);
-  border-color: var(--color-gold-dark);
-  box-shadow: 0 4px 20px var(--color-gold-glow);
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 18px rgba(9, 55, 41, 0.25);
   transform: translateY(-2px);
 }
 
-.btn-dark {
-  background-color: var(--color-dark);
-  color: #FFFFFF;
-  border-color: var(--color-dark);
-}
-
-.btn-dark:hover {
-  background-color: #000000;
-  transform: translateY(-2px);
-}
-
-.btn-outline-dark {
+.btn-outline-primary {
   background-color: transparent;
-  color: var(--color-dark);
-  border-color: var(--color-dark);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
-.btn-outline-dark:hover {
-  background-color: var(--color-dark);
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
   color: #FFFFFF;
   transform: translateY(-2px);
 }
 
-.btn-outline-gold {
-  background-color: transparent;
-  color: var(--color-gold-dark);
-  border-color: var(--color-gold);
+.btn-white {
+  background-color: #FFFFFF;
+  color: var(--color-primary-dark);
+  border-color: #FFFFFF;
 }
 
-.btn-outline-gold:hover {
-  background-color: var(--color-gold);
+.btn-white:hover {
+  background-color: var(--color-background-warm);
+  border-color: var(--color-background-warm);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
   color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--color-primary-dark);
+  border-color: #FFFFFF;
   transform: translateY(-2px);
 }
 
@@ -242,24 +241,24 @@ ul, ol { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   padding: 0.4rem 0;
-  border-bottom: 1.5px solid var(--color-dark);
+  border-bottom: 1.5px solid var(--color-text-primary);
   transition: all var(--transition-fast);
 }
 
 .btn-text-link:hover {
-  color: var(--color-gold-dark);
-  border-color: var(--color-gold-dark);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
   gap: 0.75rem;
 }
 
 /* ==========================================================================
-   SECTION 01: ANNOUNCEMENT BAR
+   SECTION 01: ANNOUNCEMENT BAR (DEEP FOREST GREEN)
    ========================================================================== */
 .announcement-bar {
-  background-color: var(--color-dark);
-  color: #EAE6DF;
+  background-color: var(--color-primary-dark);
+  color: #EDE8E2;
   height: var(--announcement-height);
   font-size: 11.5px;
   letter-spacing: 0.09em;
@@ -269,14 +268,13 @@ ul, ol { list-style: none; }
   justify-content: center;
   position: relative;
   z-index: 102;
-  border-bottom: 1px solid rgba(226, 210, 188, 0.15);
+  border-bottom: 1px solid rgba(216, 208, 200, 0.12);
 }
 
 .announcement-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  transition: opacity 0.3s ease;
 }
 
 .announcement-dot {
@@ -285,13 +283,13 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 02: HEADER & MEGA MENU NAVIGATION
+   SECTION 02: HEADER & MAIN NAVIGATION
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(250, 248, 245, 0.96);
+  background-color: rgba(254, 254, 254, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -300,7 +298,7 @@ ul, ol { list-style: none; }
 }
 
 .site-header.is-scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: #FFFFFF;
   box-shadow: var(--shadow-subtle);
 }
 
@@ -341,7 +339,7 @@ ul, ol { list-style: none; }
   font-size: 27px;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--color-dark);
+  color: var(--color-primary-dark);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -351,13 +349,13 @@ ul, ol { list-style: none; }
   font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.34em;
-  color: var(--color-gold-dark);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   margin-top: 3px;
   padding-left: 31px;
 }
 
-/* Center: Desktop Navigation Bar with Mega Menu */
+/* Center: Desktop Navigation */
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -377,7 +375,7 @@ ul, ol { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   padding: 1.8rem 0;
   position: relative;
   cursor: pointer;
@@ -390,7 +388,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 0;
   height: 1.5px;
-  background-color: var(--color-gold);
+  background-color: var(--color-primary);
   transition: width var(--transition-smooth);
 }
 
@@ -400,7 +398,7 @@ ul, ol { list-style: none; }
 }
 
 .nav-link.is-featured {
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -440,12 +438,12 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 1.1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .mega-links-list {
@@ -456,13 +454,13 @@ ul, ol { list-style: none; }
 
 .mega-link {
   font-size: 13px;
-  color: var(--color-body);
+  color: var(--color-text-secondary);
   transition: color var(--transition-fast), transform var(--transition-fast);
   display: inline-block;
 }
 
 .mega-link:hover {
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
   transform: translateX(3px);
 }
 
@@ -471,7 +469,7 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-xs);
   overflow: hidden;
   aspect-ratio: 4 / 3.2;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-background-warm);
 }
 
 .mega-featured-img {
@@ -491,7 +489,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(to top, rgba(17, 19, 21, 0.85) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(9, 55, 41, 0.9) 0%, transparent 100%);
   color: #FFFFFF;
 }
 
@@ -511,7 +509,7 @@ ul, ol { list-style: none; }
 .header-icon-btn {
   background: none;
   border: none;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   cursor: pointer;
   padding: 6px;
   display: flex;
@@ -522,7 +520,7 @@ ul, ol { list-style: none; }
 }
 
 .header-icon-btn:hover {
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
 }
 
 .header-badge {
@@ -531,7 +529,7 @@ ul, ol { list-style: none; }
   right: 0;
   width: 17px;
   height: 17px;
-  background-color: var(--color-gold);
+  background-color: var(--color-primary);
   color: #FFFFFF;
   border-radius: 50%;
   font-size: 10px;
@@ -548,15 +546,16 @@ ul, ol { list-style: none; }
   border: none;
   padding: 6px;
   cursor: pointer;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 /* ==========================================================================
-   SECTION 03: HERO SHOWCASE (EDITORIAL + DIRECT DISCOVERY)
+   SECTION 03: HERO SECTION (WARM CREAM + DEEP FOREST GREEN CONTRAST)
    ========================================================================== */
 .hero-section {
-  padding: 3rem 0 4rem 0;
-  background-color: var(--color-bg-main);
+  padding: 3.5rem 0 4.5rem 0;
+  background-color: var(--color-background-warm);
+  position: relative;
   overflow: hidden;
 }
 
@@ -574,11 +573,11 @@ ul, ol { list-style: none; }
 }
 
 .hero-eyebrow {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
   margin-bottom: 1.1rem;
   display: flex;
   align-items: center;
@@ -589,7 +588,7 @@ ul, ol { list-style: none; }
   font-size: clamp(2.8rem, 4.8vw, 4.4rem);
   font-weight: 400;
   line-height: 1.12;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
 }
@@ -597,12 +596,12 @@ ul, ol { list-style: none; }
 .hero-heading em {
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
 }
 
 .hero-description {
   font-size: 15.5px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 2.25rem;
@@ -636,12 +635,12 @@ ul, ol { list-style: none; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .hero-trust-subtitle {
   font-size: 11px;
-  color: var(--color-muted);
+  color: var(--color-text-muted);
 }
 
 .hero-right {
@@ -655,7 +654,7 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-xs);
   overflow: hidden;
   box-shadow: var(--shadow-medium);
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-background-muted);
 }
 
 .hero-img {
@@ -673,7 +672,7 @@ ul, ol { list-style: none; }
   position: absolute;
   bottom: 24px;
   left: 24px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(254, 254, 254, 0.95);
   backdrop-filter: blur(8px);
   padding: 1rem 1.4rem;
   border-radius: var(--radius-xs);
@@ -685,25 +684,24 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .hero-badge-desc {
   font-size: 11px;
-  color: var(--color-gold-dark);
-  font-weight: 500;
+  color: var(--color-primary);
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 /* ==========================================================================
-   SECTION 04: QUICK SHOP CATEGORIES (SQUARE CHIPS)
+   SECTION 04: QUICK SHOP CATEGORIES (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .quick-categories-section {
   padding: 3.5rem 0;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .quick-cat-scroll {
@@ -717,14 +715,13 @@ ul, ol { list-style: none; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  group: pointer;
 }
 
 .quick-cat-media {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
@@ -742,9 +739,9 @@ ul, ol { list-style: none; }
 }
 
 .quick-cat-card:hover .quick-cat-media {
-  border-color: var(--color-gold);
+  border-color: var(--color-primary);
   background-color: #FFFFFF;
-  box-shadow: 0 6px 18px var(--color-gold-glow);
+  box-shadow: var(--shadow-subtle);
   transform: translateY(-3px);
 }
 
@@ -755,7 +752,7 @@ ul, ol { list-style: none; }
 .quick-cat-name {
   font-size: 12.5px;
   font-weight: 500;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   letter-spacing: 0.04em;
 }
 
@@ -773,8 +770,8 @@ ul, ol { list-style: none; }
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border-light);
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
@@ -789,7 +786,7 @@ ul, ol { list-style: none; }
   max-width: 85%;
   max-height: 85%;
   object-fit: contain;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-card-clean:hover .product-media-square {
@@ -808,13 +805,13 @@ ul, ol { list-style: none; }
   right: 10px;
   width: 32px;
   height: 32px;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(254, 254, 254, 0.92);
   border-radius: 50%;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   cursor: pointer;
   z-index: 2;
   transition: all var(--transition-fast);
@@ -841,7 +838,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 500;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   line-height: 1.35;
   white-space: nowrap;
   overflow: hidden;
@@ -849,30 +846,30 @@ ul, ol { list-style: none; }
 }
 
 .product-title-clean a:hover {
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
 }
 
 .product-price-clean {
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   margin-top: 1px;
 }
 
 .product-price-strike {
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-subtle);
+  color: var(--color-text-muted);
   text-decoration: line-through;
   margin-left: 6px;
 }
 
 /* ==========================================================================
-   SECTION 05: FEATURED RINGS (EDITORIAL + PRODUCT SPLIT)
+   SECTION 05: FEATURED RINGS (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .featured-rings-section {
   padding: 5.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
 }
 
 .rings-layout-grid {
@@ -901,7 +898,7 @@ ul, ol { list-style: none; }
 
 .rings-editorial-desc {
   font-size: 14.5px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -913,13 +910,13 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 06: FEATURED BANGLES (ALTERNATE ASYMMETRICAL COMPOSITION)
+   SECTION 06: FEATURED BANGLES (WARM CREAM BACKGROUND)
    ========================================================================== */
 .featured-bangles-section {
   padding: 5.5rem 0;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
+  background-color: var(--color-background-warm);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .bangles-layout-grid {
@@ -935,7 +932,7 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-xs);
   overflow: hidden;
   box-shadow: var(--shadow-medium);
-  background-color: var(--color-bg-card);
+  background-color: var(--color-background-muted);
 }
 
 .bangles-spotlight-img {
@@ -970,7 +967,7 @@ ul, ol { list-style: none; }
 
 .bangles-desc {
   font-size: 14.5px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -982,11 +979,11 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 07: SHOP BY JEWELLERY TYPE (COMPLETE 8-TILE GRID)
+   SECTION 07: SHOP BY JEWELLERY TYPE (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .shop-by-type-section {
   padding: 5.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
 }
 
 .type-grid-8 {
@@ -1008,7 +1005,7 @@ ul, ol { list-style: none; }
 .type-nav-media {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: var(--color-bg-card);
+  background-color: var(--color-card-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1024,7 +1021,7 @@ ul, ol { list-style: none; }
 }
 
 .type-nav-card:hover {
-  border-color: var(--color-gold);
+  border-color: var(--color-primary);
   box-shadow: var(--shadow-medium);
   transform: translateY(-4px);
 }
@@ -1038,18 +1035,18 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .type-nav-name {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .type-nav-arrow {
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
   font-size: 16px;
   transition: transform var(--transition-fast);
 }
@@ -1059,12 +1056,12 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 08: SHOP BY OCCASION
+   SECTION 08: SHOP BY OCCASION (WARM CREAM BACKGROUND)
    ========================================================================== */
 .shop-by-occasion-section {
   padding: 5.5rem 0;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--color-border-light);
+  background-color: var(--color-background-warm);
+  border-top: 1px solid var(--color-border);
 }
 
 .occasion-grid {
@@ -1094,7 +1091,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(17, 19, 21, 0.85) 0%, rgba(17, 19, 21, 0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(6, 43, 32, 0.88) 0%, rgba(6, 43, 32, 0.2) 60%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1123,11 +1120,11 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 09: FEATURED COLLECTIONS (ASYMMETRIC EDITORIAL GRID)
+   SECTION 09: FEATURED COLLECTIONS (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .featured-collections-section {
   padding: 5.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
 }
 
 .collections-asymmetric-grid {
@@ -1140,7 +1137,7 @@ ul, ol { list-style: none; }
   position: relative;
   border-radius: var(--radius-xs);
   overflow: hidden;
-  background-color: var(--color-bg-card);
+  background-color: var(--color-background-muted);
   display: flex;
   flex-direction: column;
 }
@@ -1171,7 +1168,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(17, 19, 21, 0.85) 0%, rgba(17, 19, 21, 0.25) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(6, 43, 32, 0.88) 0%, rgba(6, 43, 32, 0.25) 60%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1212,11 +1209,12 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 10: NEW ARRIVALS
+   SECTION 10: NEW ARRIVALS (WARM CREAM BACKGROUND)
    ========================================================================== */
 .new-arrivals-section {
   padding: 5.5rem 0;
-  background-color: #FFFFFF;
+  background-color: var(--color-background-warm);
+  border-top: 1px solid var(--color-border);
 }
 
 .new-arrivals-grid {
@@ -1226,11 +1224,12 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 11: BEST SELLERS (INTERACTIVE TABS)
+   SECTION 11: BEST SELLERS (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .best-sellers-section {
   padding: 5.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
 }
 
 .best-seller-tabs {
@@ -1252,20 +1251,20 @@ ul, ol { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .bs-tab-btn:hover {
-  color: var(--color-dark);
-  border-color: var(--color-dark);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .bs-tab-btn.is-active {
-  background-color: var(--color-dark);
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border-color: var(--color-dark);
+  border-color: var(--color-primary);
 }
 
 .best-sellers-grid {
@@ -1275,13 +1274,13 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 12: SHOP BY PRICE (BUDGET NAVIGATION TILES)
+   SECTION 12: SHOP BY PRICE (WARM CREAM BACKGROUND)
    ========================================================================== */
 .shop-by-price-section {
   padding: 5rem 0;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
+  background-color: var(--color-background-warm);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .price-tier-grid {
@@ -1291,7 +1290,7 @@ ul, ol { list-style: none; }
 }
 
 .price-tier-card {
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xs);
   padding: 2.25rem 1.5rem;
@@ -1304,8 +1303,8 @@ ul, ol { list-style: none; }
 }
 
 .price-tier-card:hover {
-  background-color: var(--color-dark);
-  border-color: var(--color-dark);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   transform: translateY(-4px);
   box-shadow: var(--shadow-medium);
 }
@@ -1315,7 +1314,7 @@ ul, ol { list-style: none; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-gold-dark);
+  color: var(--color-brown-accent);
   margin-bottom: 0.4rem;
   transition: color var(--transition-fast);
 }
@@ -1328,7 +1327,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 26px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   margin-bottom: 0.5rem;
   transition: color var(--transition-fast);
 }
@@ -1342,23 +1341,23 @@ ul, ol { list-style: none; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   display: inline-flex;
-  align-items: center;
+  align-items: gap;
   gap: 0.35rem;
   transition: color var(--transition-fast);
 }
 
 .price-tier-card:hover .price-tier-cta {
-  color: var(--color-gold-light);
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
-   SECTION 13: WHY LOTUS JEWELLERS (4-COLUMN BENEFITS)
+   SECTION 13: WHY LOTUS JEWELLERS (SOFT IVORY BACKGROUND)
    ========================================================================== */
 .why-lotus-section {
   padding: 4.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background);
 }
 
 .why-lotus-grid {
@@ -1379,12 +1378,12 @@ ul, ol { list-style: none; }
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: var(--color-background-warm);
   border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gold-dark);
+  color: var(--color-primary);
   margin-bottom: 1.25rem;
 }
 
@@ -1392,22 +1391,22 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   margin-bottom: 0.4rem;
 }
 
 .why-benefit-desc {
   font-size: 13px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   line-height: 1.55;
 }
 
 /* ==========================================================================
-   SECTION 14: LOTUS BRAND STORY (EDITORIAL SPLIT)
+   SECTION 14: LOTUS BRAND STORY (DEEP FOREST GREEN ATELIER)
    ========================================================================== */
 .brand-story-section {
   padding: 5.5rem 0;
-  background-color: var(--color-dark-surface);
+  background-color: var(--color-primary-dark);
   color: #FFFFFF;
 }
 
@@ -1450,17 +1449,30 @@ ul, ol { list-style: none; }
 
 .brand-story-desc {
   font-size: 15px;
-  color: #C8C4BC;
+  color: #D6D0C8;
   line-height: 1.8;
   margin-bottom: 2.25rem;
 }
 
 /* ==========================================================================
-   SECTION 15: CUSTOMER REVIEWS (3-CARD GRID)
+   SECTION 15: CUSTOMER REVIEWS (DEEP FOREST GREEN / WARM CONTRAST)
    ========================================================================== */
 .customer-reviews-section {
   padding: 5.5rem 0;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.customer-reviews-section .section-title {
+  color: #FFFFFF;
+}
+
+.customer-reviews-section .section-subtitle {
+  color: #D0CCC4;
+}
+
+.customer-reviews-section .section-eyebrow {
+  color: var(--color-gold-light);
 }
 
 .reviews-grid-3 {
@@ -1470,8 +1482,8 @@ ul, ol { list-style: none; }
 }
 
 .review-card-clean {
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-border);
+  background-color: var(--color-primary-dark);
+  border: 1px solid rgba(216, 208, 200, 0.15);
   border-radius: var(--radius-xs);
   padding: 2.5rem 2rem;
   display: flex;
@@ -1491,7 +1503,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 18px;
   font-style: italic;
-  color: var(--color-dark);
+  color: #FFFFFF;
   line-height: 1.55;
   margin-bottom: 1.75rem;
 }
@@ -1499,19 +1511,19 @@ ul, ol { list-style: none; }
 .review-footer {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid rgba(216, 208, 200, 0.12);
   padding-top: 1rem;
 }
 
 .review-author-name {
   font-size: 13px;
   font-weight: 600;
-  color: var(--color-dark);
+  color: #FFFFFF;
 }
 
 .review-product-tag {
   font-size: 11.5px;
-  color: var(--color-gold-dark);
+  color: var(--color-gold-light);
   margin-top: 2px;
 }
 
@@ -1519,8 +1531,8 @@ ul, ol { list-style: none; }
    SECTION 16: SOCIAL / INSTAGRAM GALLERY
    ========================================================================== */
 .social-gallery-section {
-  padding: 4rem 0 0 0;
-  background-color: #FFFFFF;
+  padding: 4.5rem 0 0 0;
+  background-color: var(--color-background);
 }
 
 .social-grid-6 {
@@ -1548,7 +1560,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(17, 19, 21, 0.65);
+  background: rgba(6, 43, 32, 0.72);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1567,11 +1579,11 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   SECTION 17: NEWSLETTER (COMPACT VIP SIGN-UP)
+   SECTION 17: NEWSLETTER (WARM CREAM BACKGROUND)
    ========================================================================== */
 .newsletter-section {
   padding: 4.5rem 0;
-  background-color: var(--color-bg-card);
+  background-color: var(--color-background-warm);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   text-align: center;
@@ -1589,7 +1601,7 @@ ul, ol { list-style: none; }
 
 .newsletter-desc {
   font-size: 14px;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   margin-bottom: 1.75rem;
 }
 
@@ -1604,20 +1616,20 @@ ul, ol { list-style: none; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xs);
   background-color: #FFFFFF;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   outline: none;
 }
 
 .newsletter-input-field:focus {
-  border-color: var(--color-gold);
+  border-color: var(--color-primary);
 }
 
 /* ==========================================================================
-   SECTION 18: COMPREHENSIVE FOOTER
+   SECTION 18: FOOTER (DEEP FOREST GREEN)
    ========================================================================== */
 .site-footer {
-  background-color: var(--color-dark);
-  color: #D2CEC6;
+  background-color: var(--color-primary-dark);
+  color: #D6D0C8;
   padding: 5rem 0 2rem 0;
 }
 
@@ -1638,7 +1650,7 @@ ul, ol { list-style: none; }
 
 .footer-brand-desc {
   font-size: 13.5px;
-  color: #A29E96;
+  color: #AEA8A0;
   margin: 1.25rem 0 1.5rem 0;
   line-height: 1.65;
   max-width: 340px;
@@ -1654,8 +1666,8 @@ ul, ol { list-style: none; }
   height: 36px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(226, 210, 188, 0.2);
-  color: #EAE6DF;
+  border: 1px solid rgba(216, 208, 200, 0.18);
+  color: #EDE8E2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1664,7 +1676,7 @@ ul, ol { list-style: none; }
 
 .footer-social-btn:hover {
   background-color: var(--color-gold);
-  color: var(--color-dark);
+  color: var(--color-primary-dark);
   border-color: var(--color-gold);
 }
 
@@ -1685,11 +1697,11 @@ ul, ol { list-style: none; }
 
 .footer-link-list a {
   font-size: 13px;
-  color: #A29E96;
+  color: #AEA8A0;
 }
 
 .footer-link-list a:hover {
-  color: var(--color-gold-light);
+  color: #FFFFFF;
 }
 
 .footer-bottom-bar {
@@ -1699,7 +1711,7 @@ ul, ol { list-style: none; }
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 12px;
-  color: #74787E;
+  color: #8C867E;
 }
 
 /* ==========================================================================
@@ -1711,7 +1723,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(17, 19, 21, 0.65);
+  background: rgba(6, 43, 32, 0.6);
   backdrop-filter: blur(4px);
   z-index: 998;
   opacity: 0;
@@ -1724,7 +1736,6 @@ ul, ol { list-style: none; }
   visibility: visible;
 }
 
-/* Slide-out Drawers */
 .drawer-panel {
   position: fixed;
   top: 0;
@@ -1766,7 +1777,7 @@ ul, ol { list-style: none; }
 .drawer-head-title {
   font-family: var(--font-display);
   font-size: 20px;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .drawer-close {
@@ -1774,7 +1785,7 @@ ul, ol { list-style: none; }
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .drawer-content {
@@ -1786,7 +1797,7 @@ ul, ol { list-style: none; }
 .drawer-bottom {
   padding: 1.5rem;
   border-top: 1px solid var(--color-border);
-  background-color: var(--color-bg-main);
+  background-color: var(--color-background-warm);
 }
 
 /* Search Modal Overlay */
@@ -1810,7 +1821,7 @@ ul, ol { list-style: none; }
 .search-form-row {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -1821,7 +1832,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 24px;
   outline: none;
-  color: var(--color-dark);
+  color: var(--color-text-primary);
 }
 
 .search-tags-row {
@@ -1836,12 +1847,13 @@ ul, ol { list-style: none; }
   padding: 4px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
-  color: var(--color-body);
+  color: var(--color-text-secondary);
   cursor: pointer;
 }
 
 .search-tag-chip:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: #FFFFFF;
 }
 
@@ -1852,7 +1864,7 @@ ul, ol { list-style: none; }
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(17, 19, 21, 0.75);
+  background: rgba(6, 43, 32, 0.75);
   backdrop-filter: blur(6px);
   z-index: 1100;
   display: flex;
@@ -1886,7 +1898,7 @@ ul, ol { list-style: none; }
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(254, 254, 254, 0.9);
   border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -1900,7 +1912,7 @@ ul, ol { list-style: none; }
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background-color: var(--color-dark);
+  background-color: var(--color-primary-dark);
   color: #FFFFFF;
   padding: 0.85rem 1.4rem;
   border-radius: var(--radius-xs);
