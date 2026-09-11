@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lotus Jewellers — Fine Jewellery, Rings & Bangles Heritage</title>
-  <meta name="description" content="Discover handcrafted fine jewellery, GIA-certified diamond rings, 22K hallmarked gold bangles, and bespoke bridal collections from Lotus Jewellers.">
+  <title>Lotus Jewellers | Designer Fine Jewellery, Rings & Bangles</title>
+  <meta name="description" content="Shop iconic fine jewellery, GIA-certified diamond solitaire rings, 22K hallmarked gold bangles, and bespoke bridal masterworks from Lotus Jewellers.">
   
-  <!-- Typography System: Cormorant Garamond (Headings), Inter (UI & Body) & Cinzel -->
+  <!-- Typography System: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -17,103 +17,111 @@
 <body>
 
   <!-- =========================================================================
-       SECTION 01 — TOP UTILITY BAR (ALUKAS STYLE)
+       SECTION 01 — DAVID YURMAN INSPIRED TOP UTILITY BAR
        ========================================================================= -->
-  <div class="top-utility-bar" role="region" aria-label="Utility & Announcement Bar">
-    <div class="container">
-      <div class="top-utility-inner">
+  <aside class="dy-top-bar" role="region" aria-label="Utility Navigation">
+    <div class="container-fluid">
+      <div class="dy-top-inner">
         
-        <!-- Left: Currency & Language -->
-        <div class="top-utility-left">
-          <button type="button" class="top-select-btn">English ▾</button>
-          <span style="color: var(--color-border);">|</span>
-          <button type="button" class="top-select-btn">INR (₹) ▾</button>
-          <span style="color: var(--color-border);">|</span>
-          <div class="top-promo-badge">
-            <span>✦</span>
-            <span>Summer Privilege: <strong>15% Off Handcrafted Heirlooms</strong> • Use Code: LOTUS15</span>
-          </div>
+        <!-- Left: Region & Store Locator -->
+        <div class="dy-top-left">
+          <a href="#" class="dy-top-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>IND (₹)</span>
+          </a>
+          <a href="#about" class="dy-top-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>STORE LOCATOR</span>
+          </a>
         </div>
 
-        <!-- Right: Store & Services Links -->
-        <div class="top-utility-right">
-          <a href="#about">Store Location</a>
-          <a href="#about">Saleroom Services</a>
-          <a href="#newsletter">VIP Circle</a>
-          <a href="#shop-by-price">Gift Cards</a>
+        <!-- Center: Complimentary Shipping -->
+        <div class="dy-top-center">
+          <span>Complimentary Insured Shipping Across India</span>
+          <a href="#about">LEARN MORE</a>
+        </div>
+
+        <!-- Right: Contact Concierge -->
+        <div class="dy-top-right">
+          <a href="tel:+919876543210" class="dy-top-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>CONTACT CONCIERGE</span>
+          </a>
         </div>
 
       </div>
     </div>
-  </div>
+  </aside>
 
   <!-- =========================================================================
-       SECTION 02 — MAIN HEADER & SECONDARY SUBNAV
+       SECTION 02 — DAVID YURMAN SIGNATURE HEADER
        ========================================================================= -->
-  <header class="site-header" id="SiteHeader">
-    <div class="container">
-      
-      <!-- Main Row: Search (Left), Brand Logo (Center), Icons (Right) -->
-      <div class="header-main-row">
+  <header class="dy-header" id="SiteHeader">
+    <div class="container-fluid">
+      <div class="dy-header-inner">
         
-        <!-- Left: Search Box Input -->
-        <div class="header-search-wrap">
-          <form class="header-search-form" onsubmit="event.preventDefault();" data-action="open-search">
-            <input type="text" class="header-search-input" placeholder="Search products, rings, bangles..." readonly>
-            <button type="button" class="header-search-btn" aria-label="Search">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </button>
-          </form>
-        </div>
-
-        <!-- Center: Brand Logo -->
-        <div class="header-logo-center">
-          <a href="index.html" class="brand-logo-main" aria-label="Lotus Jewellers Home">
-            <span>LOTUS & CO</span>
-            <span class="gold-dot">✦</span>
+        <!-- Left: Brand Logo -->
+        <div class="dy-logo-wrap">
+          <a href="index.html" class="dy-brand-logo" aria-label="Lotus Jewellers Home">
+            LOTUS JEWELLERS
           </a>
-          <span class="brand-logo-sub">FINE JEWELLERY • ESTD 1988</span>
         </div>
 
-        <!-- Right: Action Icons (Account, Wishlist, Cart) -->
-        <div class="header-actions-right">
+        <!-- Center: Clean Menu Navigation -->
+        <nav class="dy-nav" aria-label="Main Category Navigation">
+          <a href="#featured-rings" class="dy-nav-link is-active">Rings</a>
+          <a href="#featured-bangles" class="dy-nav-link">Bangles</a>
+          <a href="#best-sellers" class="dy-nav-link">Earrings</a>
+          <a href="#best-sellers" class="dy-nav-link">Necklaces</a>
+          <a href="#discover" class="dy-nav-link">High Jewellery</a>
+          <a href="#collections" class="dy-nav-link">Collections</a>
+          <a href="#about" class="dy-nav-link">World Of Lotus</a>
+        </nav>
+
+        <!-- Right: Search & Actions -->
+        <div class="dy-header-actions">
           
-          <!-- User Profile -->
-          <button type="button" class="header-action-item" onclick="alert('Lotus Patron Account Portal');" aria-label="My Account">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <!-- Search Text Trigger -->
+          <button type="button" class="dy-search-trigger" data-action="open-search" aria-label="Search Catalogue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>SEARCH</span>
+          </button>
+
+          <!-- User Account -->
+          <button type="button" class="dy-icon-btn" onclick="alert('Lotus Patron Account Portal');" aria-label="Account">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
             </svg>
           </button>
 
           <!-- Wishlist -->
-          <a href="#wishlist" class="header-action-item" aria-label="Wishlist">
-            <div class="header-icon-badge">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-              <span class="action-count-pill" id="HeaderWishlistBadge">0</span>
-            </div>
+          <a href="#wishlist" class="dy-icon-btn" aria-label="Wishlist">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="dy-count-badge" id="HeaderWishlistBadge">0</span>
           </a>
 
-          <!-- Shopping Cart Bag -->
-          <button type="button" class="header-action-item" data-action="open-cart" aria-label="Shopping Bag">
-            <div class="header-icon-badge">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>
-              </svg>
-              <span class="action-count-pill" id="HeaderCartBadge">0</span>
-            </div>
-            <div class="cart-mini-info" style="margin-left: 4px;">
-              <span class="cart-mini-label">Your Cart</span>
-              <span class="cart-mini-val" id="HeaderCartMiniVal">₹ 0</span>
-            </div>
+          <!-- Shopping Bag -->
+          <button type="button" class="dy-icon-btn" data-action="open-cart" aria-label="Shopping Bag">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="dy-count-badge" id="HeaderCartBadge">0</span>
           </button>
 
           <!-- Mobile Toggle -->
-          <button type="button" class="header-action-item" id="MobileNavToggle" style="display: none;" aria-label="Open Mobile Menu">
+          <button type="button" class="dy-icon-btn" id="MobileNavToggle" style="display: none;" aria-label="Open Mobile Menu">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
@@ -122,313 +130,167 @@
         </div>
 
       </div>
-
-      <!-- Secondary Subnav Row -->
-      <div class="header-subnav-bar">
-        <div class="subnav-inner">
-          
-          <!-- Category Dropdown Button (Deep Green / Gold) -->
-          <button type="button" class="category-dropdown-btn" data-action="open-search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-            <span>Browse Categories</span>
-            <span class="gold-icon">▾</span>
-          </button>
-
-          <!-- Navigation Links -->
-          <nav class="subnav-links-list" aria-label="Category Navigation">
-            <a href="index.html" class="subnav-link is-active">Home ▾</a>
-            <a href="#featured-rings" class="subnav-link">Rings ▾</a>
-            <a href="#featured-bangles" class="subnav-link">Bangles ▾</a>
-            <a href="#best-sellers" class="subnav-link">Earrings</a>
-            <a href="#best-sellers" class="subnav-link">Necklaces</a>
-            <a href="#popular-categories" class="subnav-link">Bracelets</a>
-            <a href="#collections" class="subnav-link">Collections ▾</a>
-            <a href="#occasions" class="subnav-link" style="color: var(--color-gold-dark); font-weight: 500;">Bridal Trousseau</a>
-          </nav>
-
-          <!-- Subnav Right Contact & Store Finder -->
-          <div class="subnav-contact-right">
-            <a href="tel:+919876543210" class="subnav-contact-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>+91 98765 43210</span>
-            </a>
-            <a href="#about" class="subnav-contact-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>Find Store</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </header>
 
   <!-- =========================================================================
-       SECTION 03 — HERO SHOWCASE (EDITORIAL COMPOSITION)
+       SECTION 03 — DAVID YURMAN SIGNATURE FULL-BLEED HERO SHOWCASE
        ========================================================================= -->
-  <section class="hero-alukas-section" aria-label="Hero Showcase">
-    <div class="container">
-      <div class="hero-alukas-grid">
-        
-        <!-- Left: Text Content (Max 480px–580px width) -->
-        <div class="hero-alukas-content">
-          <span class="hero-alukas-eyebrow">
-            <span>✦</span>
-            <span>HAUTE JOAILLERIE • ESTD 1988</span>
-          </span>
-          <h1 class="hero-alukas-title">
-            Jewellery That <em>Stays With You</em>
+  <section class="dy-hero-section" aria-label="Sculpted Heritage Collection">
+    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=90" alt="Lotus Jewellers Sculpted Heritage Fine Jewellery" class="dy-hero-bg">
+    <div class="dy-hero-gradient"></div>
+
+    <div class="container-fluid">
+      <div class="dy-hero-content-wrap">
+        <div class="dy-hero-text-block">
+          <h1 class="dy-hero-title">
+            SCULPTED SOLITAIRES
           </h1>
-          <p class="hero-alukas-subtitle">
-            Ring, Occasion Pieces, Royal Bangles, Certified Solitaires & bespoke bridal heirloom jewellery handcrafted for life's unforgettable milestones.
+          <p class="dy-hero-subtitle">
+            HANDCRAFTED IN 18K GOLD & <strong>GIA CERTIFIED NATURAL DIAMONDS</strong>
           </p>
-          <div class="hero-alukas-cta">
-            <a href="#featured-rings" class="btn btn-primary">
-              <span>Shop Rings</span>
-              <span class="btn-arrow">→</span>
-            </a>
-            <a href="#featured-bangles" class="btn btn-outline-dark">
-              <span>Explore Bangles</span>
-              <span class="btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Lifestyle Model Media -->
-        <div class="hero-alukas-media">
-          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85" alt="Lotus Jewellers Fine Jewellery" class="hero-alukas-img">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 04 — 3-COLUMN PROMO BANNERS (BACKGROUND: WHITE)
-       ========================================================================= -->
-  <section class="promo-banners-section" aria-label="Featured Promo Banners">
-    <div class="container">
-      <div class="promo-banners-grid">
-        
-        <!-- Card 1: 2026 Edition -->
-        <div class="promo-banner-card promo-card-1">
-          <div class="promo-card-content">
-            <span class="promo-card-tag">2026 EDITION</span>
-            <h3 class="promo-card-title">Just Launched Statement Gold Kadas</h3>
-            <a href="#featured-bangles" class="promo-card-link">SEE MORE <span class="arrow-icon">→</span></a>
-          </div>
-          <div class="promo-card-media">
-            <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=300&q=80" alt="Statement Gold Kadas" class="promo-card-img">
-          </div>
-        </div>
-
-        <!-- Card 2: Flat Privilege -->
-        <div class="promo-banner-card promo-card-2">
-          <div class="promo-card-content">
-            <span class="promo-card-tag">FLAT PRIVILEGE</span>
-            <h3 class="promo-card-title">Necklaces & Solitaire Body Jewels</h3>
-            <a href="#best-sellers" class="promo-card-link">SHOP NOW <span class="arrow-icon">→</span></a>
-          </div>
-          <div class="promo-card-media">
-            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=300&q=80" alt="Necklaces and Solitaire Jewels" class="promo-card-img">
-          </div>
-        </div>
-
-        <!-- Card 3: Deep Green Dark Luxury -->
-        <div class="promo-banner-card promo-card-3">
-          <div class="promo-card-content">
-            <span class="promo-card-tag">NEW COLLECTION</span>
-            <h3 class="promo-card-title">Jewellery & Solitaire Rings</h3>
-            <a href="#featured-rings" class="promo-card-link">SHOP NOW <span class="arrow-icon">→</span></a>
-          </div>
-          <div class="promo-card-media">
-            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=300&q=80" alt="Solitaire Rings" class="promo-card-img">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 05 — POPULAR CATEGORIES (PATTERN A — CENTERED HEADER)
-       ========================================================================= -->
-  <section class="popular-categories-section section-medium" id="popular-categories" aria-label="Popular Categories">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-eyebrow">Curated Universes</span>
-        <h2 class="section-title">Popular Categories</h2>
-        <p class="section-subtitle">Discover our most celebrated jewellery archetypes curated for every milestone.</p>
-      </div>
-
-      <div class="popular-cat-grid">
-        
-        <!-- 1. Necklaces -->
-        <a href="#best-sellers" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=300&q=80" alt="Necklaces" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Necklaces</span>
-        </a>
-
-        <!-- 2. Rings -->
-        <a href="#featured-rings" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=300&q=80" alt="Rings" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Rings</span>
-        </a>
-
-        <!-- 3. Bracelets -->
-        <a href="#popular-categories" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=300&q=80" alt="Bracelets" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Bracelets</span>
-        </a>
-
-        <!-- 4. Earrings -->
-        <a href="#best-sellers" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=300&q=80" alt="Earrings" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Earrings</span>
-        </a>
-
-        <!-- 5. Bangles & Kadas -->
-        <a href="#featured-bangles" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=300&q=80" alt="Bangles & Kadas" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Bangles & Kadas</span>
-        </a>
-
-        <!-- 6. Gift Ideas -->
-        <a href="#shop-by-price" class="popular-cat-item">
-          <div class="popular-cat-circle">
-            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=300&q=80" alt="Gift Ideas" class="popular-cat-img" loading="lazy">
-          </div>
-          <span class="popular-cat-label">Gift Ideas</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 06 — TRENDY COLLECTION (PATTERN B — SPLIT HEADER)
-       ========================================================================= -->
-  <section class="trendy-collection-section section-major bg-white" aria-label="Trendy Collection">
-    <div class="container">
-      <div class="section-header-split">
-        <div class="section-header-split-left">
-          <span class="section-eyebrow">Fresh Unveilings</span>
-          <h2 class="section-title">Trendy Collection</h2>
-          <p class="section-subtitle">Collect your loves with our newest arrivals freshly crafted at our atelier.</p>
-        </div>
-        <a href="#featured-rings" class="section-header-link">
-          <span>View All Trendy</span>
-          <span class="arrow-icon">→</span>
-        </a>
-      </div>
-
-      <!-- 4-Card Product Grid (Rendered dynamically by JS) -->
-      <div class="products-grid-4" id="TrendyGrid">
-        <!-- Injected dynamically by assets/js/main.js -->
-      </div>
-
-      <!-- Pagination Indicator Dots -->
-      <div class="carousel-dots-row">
-        <button type="button" class="carousel-dot is-active" aria-label="Page 1"></button>
-        <button type="button" class="carousel-dot" aria-label="Page 2"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 07 — STORE LOCATOR STRIP
-       ========================================================================= -->
-  <aside class="store-locator-strip" aria-label="Saleroom Locator Banner">
-    <div class="container">
-      <div class="store-locator-inner">
-        <div class="store-locator-msg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-          <span>Find Lotus Salerooms & Boutiques Near You</span>
-        </div>
-        <button type="button" class="store-locator-btn" onclick="alert('Viewing Lotus Jewellers Flagship Salons: Mumbai, Delhi, London');">
-          Find Store
-        </button>
-      </div>
-    </div>
-  </aside>
-
-  <!-- =========================================================================
-       SECTION 08 — FEATURED RINGS (PATTERN C — EDITORIAL SPLIT)
-       ========================================================================= -->
-  <section class="featured-rings-section section-major bg-white" id="featured-rings" aria-label="Featured Rings">
-    <div class="container">
-      <div class="rings-layout-grid">
-        
-        <!-- Editorial Content Area (Sticky Left) -->
-        <div class="rings-editorial-box">
-          <span class="section-eyebrow">Rings Collection</span>
-          <h2 class="rings-editorial-title">A Symbol Of Every Story</h2>
-          <p class="rings-editorial-desc">
-            Discover rings crafted for celebrations, commitments, and everyday elegance. From timeless solitaires to delicate stackable diamond bands.
-          </p>
-          <a href="#featured-rings" class="btn btn-primary">
-            <span>Explore All Rings</span>
-            <span class="btn-arrow">→</span>
+          <a href="#discover" class="dy-hero-cta-btn">
+            SHOP THE COLLECTION
           </a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Clean Product Grid (6 Square Cards) -->
-        <div class="rings-products-grid" id="FeaturedRingsGrid">
-          <!-- Rendered dynamically by assets/js/main.js -->
-        </div>
+  <!-- =========================================================================
+       SECTION 04 — DISCOVER THE COLLECTION (1:1 TRANSPARENT USER PRODUCT CARDS)
+       ========================================================================= -->
+  <section class="section-major bg-white" id="discover" aria-label="Discover The Collection">
+    <div class="container">
+      
+      <!-- Section Header (David Yurman Signature) -->
+      <div class="section-header-dy">
+        <h2 class="section-header-dy-title">DISCOVER THE COLLECTION</h2>
+        <a href="#featured-rings" class="section-header-dy-link">
+          <span>SHOP ALL</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- 4-Card 1:1 Transparent Product Grid (User Diamond Rings Injected via JS) -->
+      <div class="dy-product-grid-4" id="DiscoverCollectionGrid">
+        <!-- Rendered dynamically by assets/js/main.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 05 — SHOP BY CATEGORY (1:1 RATIO DISCOVERY)
+       ========================================================================= -->
+  <section class="section-medium bg-pale-green" aria-label="Shop By Category">
+    <div class="container">
+      
+      <div class="section-header-dy">
+        <h2 class="section-header-dy-title">SHOP BY CATEGORY</h2>
+        <a href="#featured-rings" class="section-header-dy-link">
+          <span>EXPLORE ALL (2,500+)</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="dy-category-scroll-grid">
+        
+        <!-- 1. Rings (User Provided Image) -->
+        <a href="#featured-rings" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="assets/images/ring-solitaire-angle.png" alt="Rings" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">RINGS</span>
+        </a>
+
+        <!-- 2. Bangles -->
+        <a href="#featured-bangles" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=400&q=80" alt="Bangles" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">BANGLES</span>
+        </a>
+
+        <!-- 3. Earrings -->
+        <a href="#best-sellers" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=400&q=80" alt="Earrings" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">EARRINGS</span>
+        </a>
+
+        <!-- 4. Necklaces -->
+        <a href="#best-sellers" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=400&q=80" alt="Necklaces" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">NECKLACES</span>
+        </a>
+
+        <!-- 5. Solitaires (User Image) -->
+        <a href="#discover" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="assets/images/ring-solitaire-side.png" alt="Solitaires" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">SOLITAIRES</span>
+        </a>
+
+        <!-- 6. Bracelets -->
+        <a href="#featured-bangles" class="dy-category-tile">
+          <div class="dy-category-media-1x1">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=400&q=80" alt="Bracelets" class="dy-category-img" loading="lazy">
+          </div>
+          <span class="dy-category-title">BRACELETS</span>
+        </a>
 
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 09 — FEATURED BANGLES (PATTERN C — EDITORIAL SPOTLIGHT)
+       SECTION 06 — FEATURED RINGS (1:1 TRANSPARENT CARDS + EDITORIAL)
        ========================================================================= -->
-  <section class="featured-bangles-section section-major bg-pale-green" id="featured-bangles" aria-label="Featured Bangles">
+  <section class="section-major bg-white" id="featured-rings" aria-label="Featured Rings Collection">
     <div class="container">
-      <div class="bangles-layout-grid">
+      
+      <div class="section-header-dy">
+        <h2 class="section-header-dy-title">ICONIC RINGS COLLECTION</h2>
+        <a href="#featured-rings" class="section-header-dy-link">
+          <span>VIEW ALL RINGS</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- 6-Card 1:1 Transparent Rings Grid (User Ring Images Injected via JS) -->
+      <div class="dy-product-grid-6" id="FeaturedRingsGrid" style="grid-template-columns: repeat(6, 1fr);">
+        <!-- Rendered dynamically by assets/js/main.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 07 — EDITORIAL CAMPAIGN SPLIT (BANGLES & SOLITAIRES)
+       ========================================================================= -->
+  <section class="section-major bg-pale-green" id="featured-bangles" aria-label="Featured Bangles & Kadas">
+    <div class="container">
+      <div class="dy-editorial-split">
         
-        <!-- Spotlight Media Card -->
-        <div class="bangles-media-spotlight">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Lotus Jewellers 22K Gold and Diamond Bangles" class="bangles-spotlight-img" loading="lazy">
+        <!-- Left: Editorial Lifestyle Spotlight -->
+        <div class="dy-editorial-media">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Lotus 22K Gold and Diamond Bangles" class="dy-editorial-img" loading="lazy">
         </div>
 
-        <!-- Content + 4 Featured Products -->
-        <div class="bangles-content-side">
-          <div class="bangles-header-block">
-            <span class="section-eyebrow">Bangles & Kadas</span>
-            <h2 class="bangles-title">Elegance In Every Curve</h2>
-            <p class="bangles-desc">
-              Discover beautifully crafted bangles and traditional kadas designed for royal celebrations and effortless everyday wear.
-            </p>
-            <a href="#featured-bangles" class="btn btn-outline-primary">
-              <span>Explore Bangles</span>
-              <span class="btn-arrow">→</span>
-            </a>
-          </div>
-
-          <!-- 4 Clean Square Bangle Products -->
-          <div class="bangles-products-grid" id="FeaturedBanglesGrid">
+        <!-- Right: Content & 4 Transparent Bangle Cards -->
+        <div class="dy-editorial-info">
+          <span class="dy-editorial-tag">22K GOLD & DIAMOND HERITAGE</span>
+          <h2 class="dy-editorial-title">ROYAL BANGLES & KADAS</h2>
+          <p class="dy-editorial-desc">
+            Sculptural curves, hand-carved polki detailing, and certified diamond tennis bangles engineered for effortless timeless luxury.
+          </p>
+          
+          <div class="dy-product-grid-4" id="FeaturedBanglesGrid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
             <!-- Rendered dynamically by assets/js/main.js -->
           </div>
         </div>
@@ -438,153 +300,64 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 10 — FEATURED COLLECTIONS (ASYMMETRIC EDITORIAL GRID)
+       SECTION 08 — BEST SELLERS (INTERACTIVE TABS & 1:1 TRANSPARENT CARDS)
        ========================================================================= -->
-  <section class="featured-collections-section section-major bg-white" id="collections" aria-label="Featured Collections">
+  <section class="section-major bg-white" id="best-sellers" aria-label="Best Sellers">
     <div class="container">
-      <div class="section-header-center">
-        <span class="section-eyebrow">The Atelier Archive</span>
-        <h2 class="section-title">Discover Our Collections</h2>
-        <p class="section-subtitle">Distinct design languages celebrating solitaire diamonds, royal gold, and daily minimal luxury.</p>
+      
+      <div class="section-header-dy" style="border: none; margin-bottom: 1.5rem; justify-content: center;">
+        <h2 class="section-header-dy-title">MOST CELEBRATED CREATIONS</h2>
       </div>
 
-      <div class="collections-asymmetric-grid">
-        
-        <!-- Large Card 1: Bridal Regalia -->
-        <a href="#featured-bangles" class="collection-card">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="The Royal Bridal Regalia" class="collection-bg-img" loading="lazy">
-          <div class="collection-card-overlay">
-            <span class="collection-tag">Heritage Masterpieces</span>
-            <h3 class="collection-title">The Royal Bridal Regalia</h3>
-            <span class="collection-link-text">Explore Trousseau →</span>
-          </div>
-        </a>
-
-        <!-- Supporting Card 1: Solitaire Vault -->
-        <a href="#featured-rings" class="collection-card">
-          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=85" alt="The Solitaire Vault" class="collection-bg-img" loading="lazy">
-          <div class="collection-card-overlay">
-            <span class="collection-tag">GIA Natural Diamonds</span>
-            <h3 class="collection-title">The Solitaire Vault</h3>
-            <span class="collection-link-text">Shop Solitaires →</span>
-          </div>
-        </a>
-
-        <!-- Supporting Card 2: Minimal Jewels -->
-        <a href="#best-sellers" class="collection-card">
-          <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=85" alt="Everyday Minimal Luxury" class="collection-bg-img" loading="lazy">
-          <div class="collection-card-overlay">
-            <span class="collection-tag">Daily Wear</span>
-            <h3 class="collection-title">Everyday Elegance</h3>
-            <span class="collection-link-text">View All →</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 11 — AUTUMN COLLECTION (PATTERN B — SPLIT HEADER)
-       ========================================================================= -->
-  <section class="autumn-collection-section section-major bg-pale-green" id="autumn" aria-label="Autumn Collection">
-    <div class="container">
-      <div class="section-header-split">
-        <div class="section-header-split-left">
-          <span class="section-eyebrow">Seasonal Highlights</span>
-          <h2 class="section-title">Autumn Collection</h2>
-          <p class="section-subtitle">Collect your loves with our autumn arrivals and bridal trousseau masterpieces.</p>
-        </div>
-        <a href="#featured-bangles" class="section-header-link">
-          <span>Explore Autumn</span>
-          <span class="arrow-icon">→</span>
-        </a>
-      </div>
-
-      <!-- 4-Card Product Grid (Rendered dynamically by JS) -->
-      <div class="products-grid-4" id="AutumnGrid">
-        <!-- Injected dynamically by assets/js/main.js -->
-      </div>
-
-      <!-- Pagination Indicator Dots -->
-      <div class="carousel-dots-row">
-        <button type="button" class="carousel-dot is-active" aria-label="Page 1"></button>
-        <button type="button" class="carousel-dot" aria-label="Page 2"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 12 — BEST SELLERS (INTERACTIVE TABS - BACKGROUND: WHITE)
-       ========================================================================= -->
-  <section class="best-sellers-section section-major bg-white" id="best-sellers" aria-label="Best Sellers">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-eyebrow">Iconic Masterworks</span>
-        <h2 class="section-title">Most Loved Jewellery</h2>
-        <p class="section-subtitle">Our most celebrated designs, loved by collectors across the globe.</p>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <nav class="best-seller-tabs" aria-label="Best Sellers Category Tabs">
-        <button type="button" class="bs-tab-btn is-active" data-category="rings">Rings</button>
-        <button type="button" class="bs-tab-btn" data-category="bangles">Bangles</button>
-        <button type="button" class="bs-tab-btn" data-category="earrings">Earrings</button>
-        <button type="button" class="bs-tab-btn" data-category="necklaces">Necklaces</button>
+      <!-- Tab Filter Navigation -->
+      <nav style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+        <button type="button" class="bs-tab-btn is-active" data-category="rings">RINGS</button>
+        <button type="button" class="bs-tab-btn" data-category="bangles">BANGLES</button>
+        <button type="button" class="bs-tab-btn" data-category="earrings">EARRINGS</button>
+        <button type="button" class="bs-tab-btn" data-category="necklaces">NECKLACES</button>
       </nav>
 
-      <!-- Products Grid -->
-      <div class="best-sellers-grid" id="BestSellersGrid">
+      <!-- 4-Card Transparent Grid -->
+      <div class="dy-product-grid-4" id="BestSellersGrid">
         <!-- Rendered dynamically by assets/js/main.js -->
       </div>
+
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 13 — WHY LOTUS JEWELLERS (COMPACT TRUST PILLARS)
+       SECTION 09 — WHY LOTUS JEWELLERS (TRUST PILLARS)
        ========================================================================= -->
-  <section class="why-lotus-section section-compact bg-pale-green" aria-label="Why Choose Lotus Jewellers">
+  <section class="section-compact bg-pale-green" aria-label="Why Choose Lotus Jewellers">
     <div class="container">
-      <div class="why-lotus-grid">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; text-align: center;">
         
-        <div class="why-benefit-item">
-          <div class="why-benefit-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-primary); margin-bottom: 4px;">
+            BIS 916 & GIA CERTIFIED
           </div>
-          <h3 class="why-benefit-title">Certified Jewellery</h3>
-          <p class="why-benefit-desc">Authentic BIS 916 hallmarking and international GIA/IGI diamond certifications with every piece.</p>
+          <p style="font-size: 13px; color: var(--color-text-secondary);">100% certified diamonds and hallmarked 22K/18K gold.</p>
         </div>
 
-        <div class="why-benefit-item">
-          <div class="why-benefit-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
-            </svg>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-primary); margin-bottom: 4px;">
+            COMPLIMENTARY SHIPPING
           </div>
-          <h3 class="why-benefit-title">Secure Delivery</h3>
-          <p class="why-benefit-desc">100% insured courier shipping with tamper-evident packaging and real-time tracking.</p>
+          <p style="font-size: 13px; color: var(--color-text-secondary);">Fully insured white-glove courier delivery across India.</p>
         </div>
 
-        <div class="why-benefit-item">
-          <div class="why-benefit-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-            </svg>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-primary); margin-bottom: 4px;">
+            15-DAY RETURNS & BUYBACK
           </div>
-          <h3 class="why-benefit-title">Easy Returns</h3>
-          <p class="why-benefit-desc">Simple 15-day exchange and lifetime buyback guarantee across all gold and diamond masterworks.</p>
+          <p style="font-size: 13px; color: var(--color-text-secondary);">Simple hassle-free exchanges and lifetime gold buyback.</p>
         </div>
 
-        <div class="why-benefit-item">
-          <div class="why-benefit-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-primary); margin-bottom: 4px;">
+            LEGACY SINCE 1988
           </div>
-          <h3 class="why-benefit-title">Trusted Since 1988</h3>
-          <p class="why-benefit-desc">Handcrafting heirloom jewels for generations of families and celebrations for over 35 years.</p>
+          <p style="font-size: 13px; color: var(--color-text-secondary);">Handcrafting royal heirloom jewellery for over 35 years.</p>
         </div>
 
       </div>
@@ -592,25 +365,28 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 14 — BRAND STORY / ATELIER (DEEP FOREST GREEN)
+       SECTION 10 — BRAND STORY / ATELIER (DEEP FOREST GREEN)
        ========================================================================= -->
-  <section class="brand-story-section section-major bg-deep-green" aria-label="Brand Story">
+  <section class="section-major bg-deep-green" id="about" aria-label="Brand Story">
     <div class="container">
-      <div class="brand-story-grid">
+      <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: center;">
         
-        <div class="brand-story-media">
-          <img src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=1000&q=85" alt="Generational goldsmiths at Lotus Jewellers" class="brand-story-img" loading="lazy">
+        <div>
+          <img src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=1000&q=85" alt="Atelier Craftsmen" style="width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover;">
         </div>
 
-        <div class="brand-story-content">
-          <span class="section-eyebrow">The Lotus Legacy</span>
-          <h2 class="brand-story-title">Crafted To Be Remembered</h2>
-          <p class="brand-story-desc">
-            At Lotus Jewellers, we believe fine jewellery is more than adornment — it is an enduring archive of love, milestones, and personal heritage. Each ring, bangle, and choker is brought to life by master generational karigars dedicated to perfection in every micro-pavé setting and gold engraving.
+        <div>
+          <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gold-light); display: block; margin-bottom: 0.85rem;">
+            THE LOTUS ATELIER
+          </span>
+          <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.4rem); color: #FFFFFF; line-height: 1.15; margin-bottom: 1.25rem;">
+            CRAFTED TO BE REMEMBERED
+          </h2>
+          <p style="font-size: 15.5px; color: #D6D0C8; line-height: 1.8; margin-bottom: 2.25rem;">
+            At Lotus Jewellers, every diamond solitaire ring and royal gold bangle is brought to life by master generational karigars dedicated to absolute perfection in every setting, prong, and engraving.
           </p>
-          <a href="#about" class="btn btn-outline-white">
-            <span>Discover Our Story</span>
-            <span class="btn-arrow">→</span>
+          <a href="#discover" class="dy-hero-cta-btn" style="background: #FFFFFF; color: #093729;">
+            DISCOVER THE ATELIER
           </a>
         </div>
 
@@ -619,124 +395,38 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 15 — CUSTOMER REVIEWS (DEEP FOREST GREEN DARK)
+       SECTION 11 — VIP NEWSLETTER (THE LOTUS CIRCLE)
        ========================================================================= -->
-  <section class="customer-reviews-section section-major bg-dark-green" aria-label="Customer Reviews">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-eyebrow">Patron Love</span>
-        <h2 class="section-title">Loved By Our Customers</h2>
-        <p class="section-subtitle">Real moments, real heirlooms, and trusted memories from our patron collectors.</p>
-      </div>
-
-      <div class="reviews-grid-3">
-        
-        <div class="review-card-clean">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-quote-text">"The solitaire engagement ring exceeded all my expectations. The clarity and lotus-prong setting make the diamond catch light from every angle."</p>
-          </div>
-          <div class="review-footer">
-            <span class="review-author-name">Ananya & Sidharth R.</span>
-            <span class="review-product-tag">Purchased: Aura Solitaire Diamond Ring</span>
-          </div>
-        </div>
-
-        <div class="review-card-clean">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-quote-text">"Ordered our bridal 22K gold kada set online. The weight, BIS hallmark, and intricate hand-carving are simply stunning."</p>
-          </div>
-          <div class="review-footer">
-            <span class="review-author-name">Pooja Sharma</span>
-            <span class="review-product-tag">Purchased: Rajputana 22K Solid Gold Kada</span>
-          </div>
-        </div>
-
-        <div class="review-card-clean">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-quote-text">"From the packaging to the IGI certificate, Lotus Jewellers delivers true luxury. Transparent pricing and exceptional customer care."</p>
-          </div>
-          <div class="review-footer">
-            <span class="review-author-name">Vikramaditya Bose</span>
-            <span class="review-product-tag">Purchased: Venezia Diamond Tennis Bangle</span>
-          </div>
-        </div>
-
-      </div>
+  <section class="section-medium bg-pale-green" id="newsletter" aria-label="VIP Newsletter">
+    <div class="container" style="text-align: center; max-width: 600px;">
+      <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-primary); display: block; margin-bottom: 0.6rem;">
+        JOIN THE LOTUS CIRCLE
+      </span>
+      <h2 style="font-size: 28px; margin-bottom: 0.75rem;">BE THE FIRST TO KNOW</h2>
+      <p style="font-size: 14.5px; color: var(--color-text-secondary); margin-bottom: 2rem;">
+        Receive private invitations to seasonal high jewellery unveils, new solitaire arrivals, and bespoke salon events.
+      </p>
+      
+      <form style="display: flex; gap: 0.5rem;" onsubmit="event.preventDefault(); alert('Thank you for joining The Lotus Circle.');">
+        <input type="email" placeholder="Enter your email address" required style="flex: 1; padding: 0.9rem 1.25rem; font-size: 13px; border: 1px solid var(--color-border); outline: none; background: #FFF;">
+        <button type="submit" class="dy-hero-cta-btn" style="background: var(--color-primary); color: #FFF; padding: 0.9rem 2rem;">
+          SIGN UP
+        </button>
+      </form>
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 16 — SOCIAL / INSTAGRAM GALLERY (BACKGROUND: WHITE)
+       SECTION 12 — FOOTER (MINIMAL LUXURY)
        ========================================================================= -->
-  <section class="social-gallery-section" aria-label="Social Gallery">
-    <div class="section-header-center" style="margin-bottom: 2rem;">
-      <span class="section-eyebrow">@LotusJewellers</span>
-      <h2 style="font-size: 26px;">Follow The Lotus Story</h2>
-    </div>
-
-    <div class="social-grid-6">
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 1" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1611591478200-a612140bbd23?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 2" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 3" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 4" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 5" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-      <a href="#" class="social-item">
-        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Lotus Instagram 6" class="social-img" loading="lazy">
-        <div class="social-overlay"><span>✦ View Post</span></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 17 — VIP NEWSLETTER (BACKGROUND: PALE GREEN)
-       ========================================================================= -->
-  <section class="newsletter-section section-medium bg-pale-green" id="newsletter" aria-label="VIP Newsletter">
-    <div class="container">
-      <div class="newsletter-box">
-        <span class="section-eyebrow">The Lotus Circle</span>
-        <h2 class="newsletter-title">Stay Close To Lotus</h2>
-        <p class="newsletter-desc">Get early access to new collections, exclusive design unveils, and private saleroom invitations.</p>
-        <form class="newsletter-form-row" onsubmit="event.preventDefault(); alert('Welcome to the Lotus Circle. Your private invitation has been sent.');">
-          <input type="email" class="newsletter-input-field" placeholder="Enter your email address" required>
-          <button type="submit" class="btn btn-primary">
-            <span>Subscribe</span>
-            <span class="btn-arrow">→</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 18 — FOOTER (BACKGROUND: DEEP FOREST GREEN DARK)
-       ========================================================================= -->
-  <footer class="site-footer" id="about" role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       
       <div class="footer-main-grid">
         
         <!-- Col 01 — Brand -->
         <div>
-          <span class="footer-brand-title">LOTUS & CO</span>
-          <span style="font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.25em; color: var(--color-gold-light); display: block; margin-top: 4px;">FINE JEWELLERY • ESTD 1988</span>
+          <span class="footer-brand-title">LOTUS JEWELLERS</span>
           <p class="footer-brand-desc">
             Handcrafting certified diamond rings, royal 22K gold bangles, and bespoke bridal masterworks for over 35 years.
           </p>
@@ -748,27 +438,27 @@
           </div>
         </div>
 
-        <!-- Col 02 — Shop -->
+        <!-- Col 02 — Collections -->
         <div>
-          <h4 class="footer-col-header">Shop</h4>
+          <h4 class="footer-col-header">Collections</h4>
           <ul class="footer-link-list">
-            <li><a href="#featured-rings">Rings</a></li>
-            <li><a href="#featured-bangles">Bangles & Kadas</a></li>
-            <li><a href="#best-sellers">Earrings</a></li>
-            <li><a href="#best-sellers">Necklaces</a></li>
-            <li><a href="#popular-categories">All Jewellery (2,500+)</a></li>
+            <li><a href="#discover">Solitaire Rings</a></li>
+            <li><a href="#featured-bangles">Royal Gold Bangles</a></li>
+            <li><a href="#best-sellers">Diamond Earrings</a></li>
+            <li><a href="#best-sellers">Polki Chokers</a></li>
+            <li><a href="#discover">High Jewellery Archive</a></li>
           </ul>
         </div>
 
-        <!-- Col 03 — Customer Care -->
+        <!-- Col 03 — Client Care -->
         <div>
-          <h4 class="footer-col-header">Customer Care</h4>
+          <h4 class="footer-col-header">Client Care</h4>
           <ul class="footer-link-list">
             <li><a href="#">Contact Concierge</a></li>
-            <li><a href="#">Shipping & Insurance</a></li>
-            <li><a href="#">Returns & Exchange</a></li>
-            <li><a href="#">Track Your Order</a></li>
-            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Complimentary Shipping</a></li>
+            <li><a href="#">15-Day Returns</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Boutique Appointments</a></li>
           </ul>
         </div>
 
@@ -778,15 +468,15 @@
           <ul class="footer-link-list">
             <li><a href="#about">Our Story</a></li>
             <li><a href="#about">The Craftsmanship</a></li>
-            <li><a href="#">Hallmark & Certifications</a></li>
-            <li><a href="#">Bespoke Salons</a></li>
+            <li><a href="#">Certifications & Hallmarks</a></li>
+            <li><a href="#">Sustainability</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
         </div>
 
       </div>
 
-      <!-- Bottom Footer -->
+      <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
         <div>
           © 2026 Lotus Jewellers Private Limited. All Rights Reserved. Designed for Shopify Store Reference.
@@ -794,7 +484,7 @@
         <div style="display: flex; gap: 1.5rem;">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
-          <a href="#">Security & Certifications</a>
+          <a href="#">Legal & Hallmarking</a>
         </div>
       </div>
 
@@ -802,25 +492,23 @@
   </footer>
 
   <!-- =========================================================================
-       MODALS, DRAWERS & OVERLAYS
+       DRAWERS & MODALS
        ========================================================================= -->
-
-  <!-- Drawer Backdrop -->
   <div class="drawer-backdrop" id="DrawerBackdrop"></div>
 
-  <!-- A. Slide-Out Shopping Bag Drawer -->
+  <!-- A. Shopping Bag Drawer -->
   <aside class="drawer-panel" id="CartDrawer" aria-label="Shopping Bag Drawer">
     <div class="drawer-head">
-      <h3 class="drawer-head-title">Your Shopping Bag</h3>
+      <h3 class="drawer-head-title">Shopping Bag</h3>
       <button type="button" class="drawer-close" data-action="close-cart" aria-label="Close Bag">✕</button>
     </div>
 
-    <!-- Free Delivery Progress Meter -->
+    <!-- Insured Delivery Meter -->
     <div style="padding: 0.85rem 1.5rem; background: var(--color-bg-pale-green); border-bottom: 1px solid var(--color-border);">
       <div style="font-size: 11.5px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 5px;">
         ✦ Complimentary Insured Delivery on orders over ₹50,000
       </div>
-      <div style="width: 100%; height: 4px; background: var(--color-border); border-radius: 2px; overflow: hidden;">
+      <div style="width: 100%; height: 4px; background: var(--color-border); overflow: hidden;">
         <div id="FreeShippingMeter" style="width: 0%; height: 100%; background: var(--color-primary); transition: width 0.3s ease;"></div>
       </div>
     </div>
@@ -831,62 +519,36 @@
 
     <div class="drawer-bottom">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-        <span style="font-size: 13.5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-primary);">Estimated Subtotal</span>
-        <span style="font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: var(--color-primary-dark);" id="CartDrawerSubtotal">₹ 0</span>
+        <span style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-primary);">Subtotal</span>
+        <span style="font-size: 18px; font-weight: 700; color: var(--color-primary-dark);" id="CartDrawerSubtotal">₹ 0</span>
       </div>
-      <button type="button" class="btn btn-primary" style="width: 100%; padding: 1.1rem;" onclick="alert('Proceeding to Shopify Secure Checkout...');">
-        <span>Proceed To Checkout</span>
-        <span class="btn-arrow">→</span>
+      <button type="button" class="dy-hero-cta-btn" style="width: 100%; background: var(--color-primary); color: #FFF; padding: 1.1rem;" onclick="alert('Proceeding to Shopify Secure Checkout...');">
+        CHECKOUT
       </button>
     </div>
   </aside>
 
-  <!-- B. Slide-Out Mobile Navigation Drawer -->
-  <aside class="drawer-panel drawer-panel-left" id="MobileMenuDrawer" aria-label="Mobile Navigation">
-    <div class="drawer-head">
-      <h3 class="drawer-head-title">LOTUS & CO</h3>
-      <button type="button" class="drawer-close" id="MobileMenuClose" aria-label="Close Navigation">✕</button>
-    </div>
-    <div class="drawer-content">
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem; font-family: var(--font-display); font-size: 22px;">
-        <li><a href="#featured-rings" style="color: var(--color-primary);">✦ Rings Collection</a></li>
-        <li><a href="#featured-bangles" style="color: var(--color-primary);">✦ Bangles & Kadas</a></li>
-        <li><a href="#best-sellers">Diamond Earrings</a></li>
-        <li><a href="#best-sellers">Necklaces & Chokers</a></li>
-        <li><a href="#popular-categories">Bracelets</a></li>
-        <li><a href="#autumn">Autumn Collection</a></li>
-        <li><a href="#occasions">Shop By Occasion</a></li>
-      </ul>
-
-      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); font-size: 13px; color: var(--color-text-muted);">
-        <p><strong>Flagship Salons:</strong><br>Mumbai • Delhi • London</p>
-        <p style="margin-top: 0.5rem;"><strong>Direct Concierge:</strong><br>+91 98765 43210</p>
-      </div>
-    </div>
-  </aside>
-
-  <!-- C. Search Overlay Modal -->
+  <!-- B. Search Modal -->
   <div class="search-modal" id="SearchModal" role="dialog" aria-modal="true">
     <div class="container">
       <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
         <button type="button" id="SearchCloseBtn" style="background: none; border: none; font-size: 20px; cursor: pointer; color: var(--color-text-primary);">✕</button>
       </div>
       <div class="search-form-row">
-        <input type="text" id="SearchInput" class="search-input-main" placeholder="Search 2,500+ rings, bangles, solitaires...">
-        <button type="button" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Search</button>
+        <input type="text" id="SearchInput" class="search-input-main" placeholder="Search rings, bangles, solitaires...">
+        <button type="button" class="dy-hero-cta-btn" style="background: var(--color-black); color: #FFF; padding: 0.75rem 1.75rem;">SEARCH</button>
       </div>
       <div class="search-tags-row">
-        <span style="font-weight: 500; color: var(--color-text-muted); margin-right: 4px;">Trending:</span>
-        <a href="#featured-rings" class="search-tag-chip">Solitaire Engagement Rings</a>
+        <span style="font-weight: 600; color: var(--color-text-muted); margin-right: 4px;">TRENDING:</span>
+        <a href="#discover" class="search-tag-chip">Solitaire Diamond Rings</a>
         <a href="#featured-bangles" class="search-tag-chip">22K Gold Kadas</a>
-        <a href="#featured-bangles" class="search-tag-chip">Diamond Tennis Bangles</a>
-        <a href="#best-sellers" class="search-tag-chip">Polki Chokers</a>
-        <a href="#shop-by-price" class="search-tag-chip">Rings Under ₹25k</a>
+        <a href="#featured-bangles" class="search-tag-chip">Tennis Bangles</a>
+        <a href="#best-sellers" class="search-tag-chip">Diamond Studs</a>
       </div>
     </div>
   </div>
 
-  <!-- D. Quick View Modal -->
+  <!-- C. Quick View Modal -->
   <div class="modal-overlay" id="QuickViewModal" aria-modal="true" role="dialog">
     <div class="modal-dialog">
       <button type="button" class="modal-close-btn" id="ModalCloseBtn" aria-label="Close Quick View">✕</button>
